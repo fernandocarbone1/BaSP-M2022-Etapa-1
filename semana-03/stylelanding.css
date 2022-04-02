@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap');
+
+body {
+    width: 1440px;
+    height: auto;
+    color:#373867;
+}
+header {
+    background-color: #373867;
+    height: 77px;
+    padding: 13px;
+}
+
+.container-logo {
+    width: 270px;
+}
+
+.logo {
+    width: 77.79px;
+    padding-top: 5px;
+    padding-left: 40px;
+}
+
+.title_01 {
+    font-family: 'roboto';
+    color:white;
+    float: right;
+    padding: 10px;
+    padding-top: 30px;
+    font-size: large;
+}
+
+aside {
+    background-color: #AACE9B;
+    width: 158px;
+    height: 860px;
+    color: #373867;
+}
+
+.menu_title {
+    font-family: 'roboto';
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 50px;
+    border-bottom: 3px solid #373867;
+    width: 46px;
+    margin-left: 10px;
+}
+
+.list_structure {
+    font-size: 70%;
+    font-family: 'roboto';
+    line-height: 30px;
+    border-bottom: 1px solid #373867;
+    margin-left: 10px;
+}
+
+main {
+    padding-top: 20px;
+    padding-left: 210px;
+    font-family: 'roboto';
+    color: #373867;
+}
+
+.Trackgenix_Sub {
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 0px;
+    padding-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+article {
+    display: inline-block;
+    width: 50%;
+}
+
+.footer {
+    padding-left: 210px;
+}
+
+
