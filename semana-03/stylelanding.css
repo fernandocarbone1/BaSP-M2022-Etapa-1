@@ -7,6 +7,8 @@ body {
     color:#373867;
 }
 
+/** section header **/
+
 header {
     position: relative;
     background-color: #373867;
@@ -34,6 +36,7 @@ header {
     padding-top: 25px;
 }
 
+/**section sidebar**/
 aside {
     position: sticky;
     background-color: #AACE9B;
@@ -82,7 +85,7 @@ aside ul li {
     margin: 10px;
 }
 
-
+/**first section**/
 .manage-titlepage {
     font-size: 40px;
     font-weight: bold;
@@ -92,14 +95,14 @@ aside ul li {
 
 .subtitle {
     font-size: 20px;
-    padding-top: 40px;
+    padding-top: 20px;
 }
 
 main {
     position: relative;
-    left: 183px;
-    width: 1257px;
     font-family: 'Roboto';
+    padding-top: 50px;
+    padding-left: 240px;
 }
 
 .manage-image {
@@ -109,17 +112,22 @@ main {
 .first-section {
     display: inline-block;
     width: 1100px;
+    height: 489px;
+
 }
 
 .section-title {
     color: #373867;
     font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 20px;
 }
 
 .funct-title {
     top: -40px;
     display: inline-block;
     width: 516px;
+    height: 346px;
 }
 
 .main-paragraph {
@@ -130,22 +138,22 @@ main {
 .button {
     position: relative;
     background-color: white;
-    left: 370px;
     border: 1px solid #373867;
+    float: right;
     width: 136.46;
     height: 46px;
-    padding: 20px;
+    top: 20px;
     border-radius: 3px;
-    text-align: center;
 }
 
 .div-line {
     border-top: 2px solid #AFAFC2;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 10px;
+    padding-bottom: 40px;
     width: 1100px;
 }
 
+/**section funcionality**/
 
 .section-functionalities {
     display: inline-block;
@@ -153,13 +161,25 @@ main {
     height: 700px;
 }
 
+.box-color-funct {
+    width: 234px;
+    height: 3px;
+    border-radius: 10px;
+    margin-bottom: 48px;
+    background-color: #aace9b;
+}
+
 .subsection-01 {
+    position: relative;
     display: inline-block;
+    padding-top: 50px;
     float: left;
 }
 
 .subsection-02 {
+    position: relative;
     display: inline-block;
+    padding-top: 50px;
     float: right;
 }
 
@@ -167,52 +187,81 @@ main {
     width: 523px;
     height: 213px;
 }
+.functionality-image {
+    width: 140px;
+    height: 140px;
+    padding-right: 12px;
+}
 
 .functionality-image {
     width: 140px;
     height: 140px;
-    display: inline;
-    padding: 0px;
     float: left;
+}
+
+
+/**section improvement**/
+
+.box-color-ts {
+    width: 700px;
+    height: 3px;
+    border-radius: 10px;
+    margin-bottom: 48px;
+    background-color: #aace9b;
 }
 
 .section-improvement {
     display: inline;
-    width: 960px;
-    height: 1100px;
+    width: 1100px;
+    height: 1487px;
     padding-bottom: 70px;
 
 }
 
 .bold-title {
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     font-weight: bold;
 }
 
+.improvement-text {
+    font-size: 20px;
+}
+
 .sub-improvement01 {
+    position: relative;
     display: inline-block;
-    width: 439px;
-    height: 621px;
-    padding: 40px;
+
 }
 
 .sub-improvement02 {
+    position: relative;
     display: inline-block;
-    width: 439px;
-    height: 621px;
-    padding: 40px;
+    margin-right: 150.87px;
     float: right;
 }
 
 .block-section02 {
+    position: relative;
+    width: 400px;
+    height: 581px;
+    margin-bottom: 50px;
     padding: 20px;
-    background-color: #EBEBF0;
-    width: 440px;
+    background-color: rgb(55, 56, 103, 10%);
+}
+
+.button-card {
+    position: absolute;
+    width: 75px;
+    height: 38px;
+    border-radius: 5px;
+    bottom: 20px;
 }
 
 .image-cards {
     width: 400px;
     height: 264px;
-
 }
 
 .footer {
