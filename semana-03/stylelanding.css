@@ -1,20 +1,22 @@
+@import "reset.css";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap');
 
 body {
     width: 1440px;
     height: auto;
     color:#373867;
-    font-size: 15px;
-    padding: 10px;
 }
+
 header {
+    position: relative;
     background-color: #373867;
     width: 100%;
     height: 77px;
 }
 
 .container-logo {
-    width: 367px;}
+    width: 367px;
+}
 
 .logo {
     width: 77.79px;
@@ -32,33 +34,15 @@ header {
     padding-top: 25px;
 }
 
-.first-section {
-    margin: 20px;
-}
-
-.manage-titlepage {
-    font-size: 32px;
-    font-weight: bold;
-    width: 533.84px;
-    height: 100px;
-}
-
-.subtitle {
-    font-size: 22px;
-    margin-bottom: 60px;
-}
-
-.position-main {
-    display: inline;
-}
-
 aside {
-    position: fixed;
+    position: sticky;
     background-color: #AACE9B;
     font-family: 'roboto';
     color: #373867;
-    height: 100%;
+    height: 900px;;
     width: 184px;
+    float: left;
+    top: 0;
 }
 
 .img-1 {
@@ -98,32 +82,49 @@ aside ul li {
     margin: 10px;
 }
 
+
+.manage-titlepage {
+    font-size: 40px;
+    font-weight: bold;
+    width: 516px;
+    height: 94px;
+}
+
+.subtitle {
+    font-size: 20px;
+    padding-top: 40px;
+}
+
 main {
-    padding-top: 20px;
-    padding-left: 210px;
-    font-family: 'roboto';
-    color: #373867;
+    position: relative;
+    left: 183px;
+    width: 1257px;
+    font-family: 'Roboto';
+}
+
+.manage-image {
+    float: right;
+}
+
+.first-section {
+    display: inline-block;
+    width: 1100px;
 }
 
 .section-title {
     color: #373867;
-    padding: 20px;
     font-weight: bold;
 }
 
 .funct-title {
-    position: relative;
     top: -40px;
     display: inline-block;
-    width: 533.84px;
-    height: 180px;
-    margin-top: 15px;
-    padding-top: 15px;
-    padding-right: 20px;
+    width: 516px;
 }
 
 .main-paragraph {
-    padding-bottom: 30px;
+    padding-top: 50px;
+    font-size: 15px;
 }
 
 .button {
@@ -145,28 +146,21 @@ main {
     width: 1100px;
 }
 
+
 .section-functionalities {
     display: inline-block;
-    width: 1000px;
-    height: 500px;
-    padding-bottom: 70px;
+    width: 1100px;
+    height: 700px;
 }
 
 .subsection-01 {
     display: inline-block;
-    padding: 50px;
     float: left;
 }
 
 .subsection-02 {
     display: inline-block;
-    padding: 40px;
     float: right;
-}
-
-.funct-menu {
-    font-size: 13px;
-    float: rig;
 }
 
 .block-funct {
@@ -180,7 +174,6 @@ main {
     display: inline;
     padding: 0px;
     float: left;
-    margin-right: 23px;
 }
 
 .section-improvement {
@@ -223,5 +216,8 @@ main {
 }
 
 .footer {
-    padding-left: 210px;
+    position: relative;
+    display: inline-block;
+    left: 184px;
+    padding: 15px;
 }
