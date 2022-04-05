@@ -5,6 +5,7 @@ body {
     width: 1440px;
     height: auto;
     color:#373867;
+    height: max-content;
 }
 
 /** section header **/
@@ -402,7 +403,7 @@ main {
     width: 1110px;
     height: 97px;
     border-top: 3px solid #aace9b;
-    margin-right: 78px;
+    margin-right: 70px;
     margin-left: 251px;
     padding-top: 15px;
 }
