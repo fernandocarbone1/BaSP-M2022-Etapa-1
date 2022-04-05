@@ -50,13 +50,12 @@ aside {
 
 .img-1 {
     position: relative;
-    left: -25px;
+    right: 25px;
 }
 
 .img-1 li {
     border: none;
     padding: 9px;
-    right: 0px;
     top: 16px;
     width: 140px;
     padding-left: 30px;
@@ -82,7 +81,7 @@ aside ul li {
     list-style: none;
     line-height: 26px;
     width: 120px;
-    margin: 10px;
+    margin: 5px;
 }
 
 /**first section**/
@@ -264,9 +263,168 @@ main {
     height: 264px;
 }
 
-.footer {
-    position: relative;
+/** get in touch section **/
+
+.section-get-in {
+    width: 1110px;
+    height: 642px;
+    border-bottom: 2px solid rgb(55, 56, 103, 10%);
+    margin-bottom: 57px;
+}
+
+.get-in-title {
+    font-size: 30px;
+}
+
+.box-color-fs {
+    width: 297px;
+    height: 3px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    background-color: #aace9b;
+}
+
+.form-01 {
+    display: inline;
+    width: 45%;
+    float: left;
+}
+
+.name {
+    display: block;
+    width: 100%;
+    margin-top: 7px;
+}
+
+.select-form {
+    display: block;
+    width: 100%;
+    margin-top: 7px;
+}
+
+.form-02 {
     display: inline-block;
-    left: 184px;
-    padding: 15px;
+    width: 45%;
+    margin-left: 100px;
+}
+
+.mail-form {
+    display: block;
+    width: 100%;
+    margin-top: 7px;
+}
+
+.radio-form {
+    display: block;
+    width: 80%;
+    margin-top: 7px;
+}
+
+.form-03{
+    width: 100%;
+    margin-top: 7px;
+}
+
+.textarea {
+    display: block;
+    width: 100%;
+    height: 117px;
+    margin-top: 7px;
+    margin-bottom: 40px;
+}
+
+.inputs-form {
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.form-04 {
+    margin-bottom: 40px;
+}
+
+.submit {
+    width: 113px;
+    height: 47px;
+    background-color: #aace9b;
+    border: none;
+    border-radius: 5px;
+}
+
+.reset {
+    width: 113px;
+    height: 47px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    margin-left: 42.25px;
+}
+ 
+/** section our story**/
+
+.section-our-story {
+    width: 1110px;
+    height: 448px;
+}
+
+.our-title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.our-box-line {
+    width: 156px;
+    height: 3px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    background-color: #aace9b;
+}
+
+.our-text {
+    font-size: 20px;
+    margin-bottom: 95px;
+}
+
+/** section navigation **/
+
+.section-nav {
+    display: inline-block;
+    width: 145px;
+    height: 115px;
+    margin-top: 57px;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+/** footer **/
+
+.section-footer {
+    display: inline-block;
+    width: 1110px;
+    height: 97px;
+    border-top: 3px solid #aace9b;
+    margin-right: 78px;
+    margin-left: 251px;
+    padding-top: 15px;
+}
+
+.logos-footer {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.icon-links {
+    display: inline-block;
+    margin-top: 30px;
+    height: 40px;
+    width: 40px;
+    margin-right: 40px;
+}
+
+.address-footer {
+    float: right;
+    margin: 16px 12px 0px 297.74px;
+}
+
+.city-footer {
+    margin-bottom: 31px;
 }

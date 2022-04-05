@@ -156,89 +156,143 @@
                 </article>
                 </div>        
             </section>
-            <section>
-                <div class="div-line"></div>
-                <h3 class="section-title">Get in touch with us</h3>
-                <h4>Fullname
-                <input type="text" placeholder="">
-                </h4>
-                <h4>Adress
-                <input type="text" placeholder="">
-                </h4>
-                <h4>Choose a department</h4>
-                <select id="area" name="area">
-                    <option value="default">-Area-</option>
-                    <option value="Human resources">-Human resources-</option>
-                    <option value="Systems">-Systems-</option>
-                    <option value="Commercialization">-Commercialization-</option>
-                </select>
-                <h4><label for="options">Priority:</label></h4>
-                <input type="radio" name="gender" value="negative" checked>Low
-                <input type="radio" name="gender" value="neutral">Medium
-                <input type="radio" name="gender" value="positive">High               
-                <h4>Ask about our system</h4>
-                <textarea name="" placeholder=""></textarea>
-                <div>
-                    <input type="checkbox" id="robot" name="condition">
-                    <label for="condition"> I am not a robot</label>
-                    <input type="checkbox" id="archive" name="copy">
-                    <label for="send"> Send me a copy</label>
-                </div>      
-                <button>Submit</button>
-                <button>Reset</button>
+            <div class="div-line"></div>
+            <section class="section-get-in">
+                <h2 class="get-in-title">
+                    Get in touch with us
+                </h2>
+                <div class="box-color-fs"></div>
+                <form action="test">
+                    <div class="form-01">
+                        <div class="inputs-form">
+                            <label for="name">
+                                Full Name:
+                            </label>
+                            <input class="name" type="text" value="John Doe" name="user_name">
+                        </div>
+                        <div class="inputs-form">
+                            <label for="area">
+                                Choose a Department:
+                            </label>
+                            <select class="select-form" id="area" name="area">                                
+                                <option value="area">
+                                    Human Resources
+                                </option>
+                                <option value="area">
+                                    Systems
+                                </option>
+                                <option value="area">
+                                    Commercialization
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-02">
+                        <div class="inputs-form">
+                            <label for="mail">
+                                Email Adress:
+                            </label>
+                            <input class="mail-form" id="mail" type="email" name="user_mail">
+                        </div>
+                        <div class="inputs-form">
+                            <label for="optios">
+                                priority:
+                            </label>
+                            <div class="radio-form">
+                                <input type="radio" name="interest" value="negative" checked> low
+                                <input type="radio" name="interest" value="neutral"> Medium
+                                <input type="radio" name="interest" value="positive"> High
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-03">
+                        <label for="msg">
+                            Ask about our system:
+                        </label>
+                        <textarea class="textarea" id="msg" name="user-message"></textarea>
+                    </div>
+                    <div class="form-04">
+                        <input id="robot" type="checkbox" name="condition">
+                        <label for="condition">
+                            I am not a robot
+                        </label>
+                        <input id="condition" type="checkbox" name="copy">
+                        <label for="send">
+                            Send me a copy
+                        </label>
+                    </div>
+                    <button class="submit">Submit</button>
+                    <button class="reset">Reset</button>
+                </form>
             </section>
             <section>
-                <h3 class="bold-title">Our Story</h3>
-                <p>Donec eu diam convallis, condimentum enim non, dictum magna. Integer quis orci ullamcorper, mattis lacus sed, 
-                    porttitor velit. Vivamus enim ipsum, faucibus a mi vel, condimentum lacinia libero. Phasellus dignissim dui id
-                    lacinia posuere. Donec eleifend vehicula elit et finibus. Phasellus ultrices finibus eros. Nullam pretium quam
-                    cursus vestibulum efficitur. Cras quis volutpat neque. Maecenas non faucibus metus. Donec in est et nibh 
-                    tempus pellentesque. Fusce in ante congue, tincidunt mauris ut, commodo magna. Aenean id arcu ac metus 
-                    malesuada hendrerit quis ultrices diam. Pellentesque rhoncus porta interdum. Morbi lectus dui, porta et 
-                    tortor ac, pharetra auctor elit.
-                    Maecenas ac bibendum lacus. Nunc scelerisque ante vitae ante pulvinar vulputate. Cras id posuere dolor. Praesent
-                    id sollicitudin tortor. Nullam ac tristique elit. Proin imperdiet ultricies nunc, nec consequat nisi aliquam ut.
-                    Praesent at est nisl. Ut nec metus sed dolor cursus imperdiet eget non erat. Donec vel maximus tortor. Donec 
-                    gravida sollicitudin metus, ut porttitor nisl scelerisque nec. Aenean eu consequat felis.
-                </p>
+                <div class="section-our-story">
+                    <h3 class="our-title">Our Story</h3>
+                    <div class="our-box-line"></div>
+                    <p class="our-text">Donec eu diam convallis, condimentum enim non, dictum magna. Integer quis orci ullamcorper, mattis lacus sed, 
+                        porttitor velit. Vivamus enim ipsum, faucibus a mi vel, condimentum lacinia libero. Phasellus dignissim dui id
+                        lacinia posuere. Donec eleifend vehicula elit et finibus. Phasellus ultrices finibus eros. Nullam pretium quam
+                        cursus vestibulum efficitur. Cras quis volutpat neque. Maecenas non faucibus metus. Donec in est et nibh 
+                        tempus pellentesque. Fusce in ante congue, tincidunt mauris ut, commodo magna. Aenean id arcu ac metus 
+                        malesuada hendrerit quis ultrices diam. Pellentesque rhoncus porta interdum. Morbi lectus dui, porta et 
+                        tortor ac, pharetra auctor elit.
+                        Maecenas ac bibendum lacus. Nunc scelerisque ante vitae ante pulvinar vulputate. Cras id posuere dolor. Praesent
+                        id sollicitudin tortor. Nullam ac tristique elit. Proin imperdiet ultricies nunc, nec consequat nisi aliquam ut.
+                        Praesent at est nisl. Ut nec metus sed dolor cursus imperdiet eget non erat. Donec vel maximus tortor. Donec 
+                        gravida sollicitudin metus, ut porttitor nisl scelerisque nec. Aenean eu consequat felis.
+                    </p>
+                </div>
             </section>
+            <section>
+                <div class="div-line">
+                <nav> 
+                    <div class="section-nav">
+                        <h3>Products</h3>
+                        <ol class="option-nav">
+                            <li>Functionalities</li>
+                            <li>Downloads</li>
+                            <li>Integrations</li>
+                            <li>Extras</li>
+                        </ol>
+                    </div>
+                    <div class="section-nav">
+                        <h3>Company</h3>
+                        <ol class="option-nav">
+                            <li>About us</li>
+                            <li>Clients</li>
+                            <li>Resources</li>
+                            <li>Blog</li>
+                        </ol>
+                    </div> 
+                    <div class="section-nav">
+                        <h3>Support</h3>
+                        <ol class="option-nav">
+                            <li>Help center</li>
+                            <li>Tutorials</li>
+                            <li>API</li>
+                            <li>Contact us</li>
+                        </ol>
+                    </div>
+                </nav>
+           </section> 
         </main>
-        <footer class="footer">
-            <nav>
-                <h3>Products</h3>
-                <ol>
-                    <li>Functionalities</li>
-                    <li>Downloads</li>
-                    <li>Integrations</li>
-                    <li>Extras</li>
-                </ol>
-                <h3>Company</h3>
-                <ol>
-                    <li>About us</li>
-                    <li>Clients</li>
-                    <li>Resources</li>
-                    <li>Blog</li>
-                </ol>
-                <h3>Support</h3>
-                <ol>
-                    <li>Help center</li>
-                    <li>Tutorials</li>
-                    <li>API</li>
-                    <li>Contact us</li>
-                </ol>
-                <ul>
-                    <li>Previous</li>
-                    <li>Next</li> 
-                </ul>
-            </nav>
-            <address>
-                <a href="https:/www.linkedin.com"><img src="/assets/icons/linkedin-logo.png" alt="LinkedIn" width="30px"></a>
-                <a href="https:/www.twitter.com"><img src="/assets/icons/twitter-logo.png" alt="Twitter" width="30px"></a>
-                <a href="https:/www.facebook.com"><img src="/assets/icons/fb-logo.png" alt="Facebook" width="20px"></a>
-                <a href="https:/www.instagram.com"><img src="/assets/icons/instagram-logo.png" alt="Instagram" width="30px"></a>
-                <a href="https:/www.github.com"><img src="/assets/icons/github-logo.png" alt="GitHub" width="30px"></a>
-                <div>
-                    <p>Rosario, Argentina</p>
+        <footer>
+            <address class="section-footer">
+                <div class="logos-footer">
+                    <a class="icon-links" href="https:/www.linkedin.com">
+                        <img src="/assets/icons/linkedin-logo.png" alt="LinkedIn" width="30px"></a>
+                    <a class="icon-links" href="https:/www.twitter.com">
+                        <img src="/assets/icons/twitter-logo.png" alt="Twitter" width="30px"></a>
+                    <a class="icon-links" href="https:/www.facebook.com">
+                        <img src="/assets/icons/fb-logo.png" alt="Facebook" width="20px"></a>
+                    <a class="icon-links" href="https:/www.instagram.com">
+                        <img src="/assets/icons/instagram-logo.png" alt="Instagram" width="30px"></a>
+                    <a class="icon-links" href="https:/www.github.com">
+                        <img src="/assets/icons/github-logo.png" alt="GitHub" width="30px">
+                    </a>
+                </div>
+                <div class="address-footer">
+                    <p class="city-footer">Rosario, Argentina</p>
                     <p>Copyright © 2022 Radium Rocket. All rights reserved.</p>
                 </div>
             </address>
