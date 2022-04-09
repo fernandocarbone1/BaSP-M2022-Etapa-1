@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap');
+
+body {
+    font-family: 'roboto';
+    color: #373867;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 10px 0 10px 0;
+}
+
+h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 15px 0 15px 0;
+}
+
+button {
+    color: #373867;
+    width: 139px;
+    height: 46px;
+    background-color: white;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.div-line {
+    border-top: 2px solid #AFAFC2;
+    margin: 40px 0 40px 0;
+}
