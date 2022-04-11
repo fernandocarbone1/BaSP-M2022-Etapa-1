@@ -24,50 +24,40 @@
             </div>
         </header>
         <aside>
-            <span>
-                Menu
-            </span>
+            <span>Menu</span>
+            <div class="span-line"></div>
             <ul>
                 <li>
-                    <a href="#">
-                        Home
-                    </a>
+                    <a href="#">Home</a>
+                    <div class="span-subline"></div>
+                    </div>
                 </li>
                 <li>
-                    <a href="#">
-                        Sign Up
-                    </a>
+                    <a href="#">Sign Up</a>
+                    <div class="span-subline"></div>
                 </li>
                 <li>
-                    <a href="#">
-                        Login
-                    </a>
+                    <a href="#">Login</a>
+                    <div class="span-subline"></div>
                 </li>
                 <li>
-                    <span>
-                        Contact us
-                    </span>
+                    <span>Contact us</span>
                     <ul>
-                        <li>
-                            <img src="./assets/Icon-2.png" alt="">
-                            <a href="#">
-                                contact@trackgenix.com
-                            </a>
+                        <li class="box-contact">
+                            <img src="./assets/Icon-2.png" alt="mail">
+                            <a class="contact-p" href="#">contact@trackgenix.com</a>
                         </li>
-                        <li>
-                            <img src="./assets/Icon-1.png" alt="">
-                            <p>
-                                (000) 000-0000
-                            </p>
+                        <li class="box-contact">
+                            <img src="./assets/Icon-1.png" alt="phone">
+                            <p class="contact-p">(000) 000-0000</p>
                         </li>
-                        <li>
-                            <img src="./assets/Icon.png" alt="">
-                            <span>
-                               <p>1234 Somewhere Road</p>
-                               <p>#8254</p>
-                               <p>Nashville,TN </p>
-                               <p>00000-000</p>
-                            </span>
+                        <li class="box-contact">
+                            <img class="street-house" src="./assets/Icon.png" alt="street">
+                            <div class="contact-p">
+                                <p>1234 Somewhere Road 
+                                <p>#8254 Nashville,TN</p>
+                                <p>00000-000</p>
+                            </div>
                         </li>
                     </ul>
                 </li>
@@ -76,15 +66,17 @@
         <main>
             <section>
                 <div class="main-section">
-                    <img class="main-photo" src="./assets/icons/Insert image.png">
-                    <h2>Manage your hours and teams with ease</h2>
-                    <h3 class="sub-title">Use Trackgenix to track time, make decisions and upgrade your productivity</h3>
-                    <p class="main-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare lorem augue, id aliquam dolor 
-                        accumsan vitae. Nullam cursus aliquam dolor ac hendrerit. Etiam tempus libero id consequat egestas.
-                        Aliquam feugiat massa ex, a commodo dolor eleifend id. Maecenas euismod urna sagittis est elementum, nec 
-                        condimentum mi auctor.
-                    </p>
-                    <button>Learn more</button>
+                    <img class="main-photo" src="./assets/images/manage-teams.jpg">
+                    <div class="main-text">
+                        <h2>Manage your hours and teams with ease</h2>
+                        <h3 class="sub-title">Use Trackgenix to track time, make decisions and upgrade your productivity</h3>
+                        <p class="main-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare lorem augue, id aliquam dolor 
+                            accumsan vitae. Nullam cursus aliquam dolor ac hendrerit. Etiam tempus libero id consequat egestas.
+                            Aliquam feugiat massa ex, a commodo dolor eleifend id. Maecenas euismod urna sagittis est elementum, nec 
+                            condimentum mi auctor.
+                        </p>
+                        <button>Learn more</button>
+                    </div>
                 </div>
             </section>
             <div class="div-line"></div>
@@ -144,7 +136,7 @@
                 <div class="underline-improv"></div>
                     <article>
                         <div class="improv-card">
-                            <img src="./assets/images/productivity-booster.jpg" width="278px">
+                            <img class="img-improv" alt="Productivity image" src="./assets/images/productivity-bosster.webp">
                             <h3>Productivity booster</h3>
                             <p class="improv-paragraph">Cras blandit vehicula eros, id dapibus lacus tristique ac. Nam dapibus purus semper, tincidunt massa sit amet, 
                             euismod metus. Nunc metus dui, tincidunt eget massa nec, dapibus pellentesque tortor. 
@@ -152,7 +144,7 @@
                             <button class="button-improv">More</button>
                         </div>
                         <div class="improv-card">
-                            <img src="./assets/images/leadership.jpg" width="278px">
+                            <img class="img-improv" alt="Leadership image" src="./assets/images/Leadership.jpeg">
                             <h3>Leadership and team management</h3>
                             <p class="improv-paragraph">Duis non turpis consequat, laoreet libero a, pulvinar mauris. In hac habitasse platea dictumst.
                             </p>
@@ -161,7 +153,7 @@
                     </article>
                     <article>
                         <div class="improv-card">
-                            <img src="./assets/images/traceability.jpg" width="278px">
+                            <img class="img-improv" alt="Traceability image" src="./assets/images/work-traceability.jpeg">
                             <h3>Work traceability</h3>
                             <p class="improv-paragraph">Duis quis ipsum enim. Quisque iaculis risus turpis, quis ornare lorem fringilla at. Vestibulum iaculis arcu et
                                 tortor tristique sollicitudin.
@@ -169,7 +161,7 @@
                             <button class="button-improv">More</button>
                         </div>
                         <div class="improv-card">
-                            <img src="./assets/images/decision-making.jpg" width="278px">
+                            <img class="img-improv" alt="Decision making image" src="./assets/images/decision-making.webp">
                             <h3>Decision making</h3>
                             <p class="improv-paragraph"> Aliquam convallis elit in pharetra luctus. Aenean ultrices est eu justo gravida, nec pretium arcu facilisis.
                                 Integer ipsum libero, finibus eget nisi non, volutpat aliquet leo. Nulla rhoncus nisl id sem accumsan, 
@@ -234,7 +226,8 @@
                         <label for="msg">
                             Ask about our system:
                         </label>
-                        <textarea id="msg" name="user-message"></textarea>
+                        <texta
+                        rea id="msg" name="user-message"></textarea>
                     </div>
                     <div class="option-button">
                         <input type="checkbox" name="condition">

@@ -4,14 +4,21 @@ main {
 }
 
 .main-section {
+    display: flex;
+    flex-direction: column;
     padding-top: 20px;
     text-align: left;
+    align-items: center;
 }
 
 .main-photo {
-    width: 318px;
+    width: 320px;
     padding-top: 20px;
     padding-bottom: 20px;
+}
+
+.main-text {
+    text-align: left;
 }
 
 .sub-title {
@@ -62,6 +69,10 @@ main {
     height: 34px;
 }
 
+.img-improv {
+    width: 400px;
+}
+
 .underline-getin {
     width: 288px;
     height: 3px;
@@ -71,14 +82,14 @@ main {
 
 .input-name, .input-area, .input-mail, .input-askbout {
     display: flex;
+    font-weight: bold;
     flex-direction: column;
     margin: 20px 0;
 }
 
 .option-button {
     display: flex;
-    margin: 30px 0 30px 0;
-    text-align: center;
+    margin: 30px;
     justify-content: space-between;
 }
 
@@ -93,7 +104,6 @@ label {
 }
 
 .radio-pair {
-    /* width: 33.33%; */
     display: flex;
     justify-content: space-between;
 
