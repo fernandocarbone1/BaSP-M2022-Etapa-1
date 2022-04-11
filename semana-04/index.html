@@ -84,49 +84,45 @@
                 <h2>Functionalities</h2>
                 <div class="underline-funct"></div>
                 <div class="funct-section">
-                    <div>
-                        <article>
-                            <img class="funct-img" src="./assets/icons/calendar-logo.png" width="140px">
-                            <div>
-                                <h3>Time Tracking</h3>
-                                <p>
-                                    Donec mi nisi, pretium vel tincidunt vel, egestas nec augue. Praesent et ultrices mauris. Aenean aliquam,
-                                    sem et auctor euismod.
-                                </p>
-                            </div>
-                        </article>
-                        <article>
-                            <img class="funct-img" src="./assets/icons/multiple-roles.png" width="140px">
-                            <div>
-                                <h3>Multiple Roles</h3>
-                                <p>
-                                    Vestibulum augue sem, aliquet at mollis quis, dignissim non velit. Nullam vitae sollicitudin nisl.
-                                </p>
-                            </div>
-                        </article>
-                    </div>
-                    <div>
-                        <article>
-                            <img class="funct-img" src="./assets/icons/Reports.png" width="140px"> 
-                            <div>
-                                <h3>Reports</h3>
-                                <p>
-                                    Phasellus bibendum at nisi a varius. Donec vel mauris vel ligula fermentum elementum vitae vitae ante. 
-                                    Donec purus orci, malesuada sit amet dapibus non, sodales placerat erat.
-                                </p>
-                            </div>
-                        </article>
-                        <article>
-                            <img class="funct-img" src="./assets/icons/resource-management.png" width="140px">
-                            <div>
-                                <h3>Resource management</h3>
-                                <p>
-                                    Donec ac mi tempor, gravida velit vitae, dignissim purus. Praesent pharetra lectus consequat, faucibus nibh 
-                                    ullamcorper, dignissim nunc.
-                                </p>
-                            </div> 
-                        </article>
-                    </div>
+                    <article>
+                        <img class="funct-img" src="./assets/icons/calendar-logo.png" width="140px">
+                        <div class="funct-text">
+                            <h3 class="article-text">Time Tracking</h3>
+                            <p class="article-subtext">
+                                Donec mi nisi, pretium vel tincidunt vel, egestas nec augue. Praesent et ultrices mauris. Aenean aliquam,
+                                sem et auctor euismod.
+                            </p>
+                        </div>
+                    </article>
+                    <article>
+                        <img class="funct-img" src="./assets/icons/multiple-roles.png" width="140px">
+                        <div class="funct-text">
+                            <h3 class="article-text">Multiple Roles</h3>
+                            <p class="article-subtext">
+                                Vestibulum augue sem, aliquet at mollis quis, dignissim non velit. Nullam vitae sollicitudin nisl.
+                            </p>
+                        </div>
+                    </article>
+                    <article>
+                        <img class="funct-img" src="./assets/icons/Reports.png" width="140px"> 
+                        <div class="funct-text">
+                            <h3 class="article-text">Reports</h3>
+                            <p class="article-subtext">
+                                Phasellus bibendum at nisi a varius. Donec vel mauris vel ligula fermentum elementum vitae vitae ante. 
+                                Donec purus orci, malesuada sit amet dapibus non, sodales placerat erat.
+                            </p>
+                        </div>
+                    </article>
+                    <article>
+                        <img class="funct-img" src="./assets/icons/resource-management.png" width="140px">
+                        <div class="funct-text">
+                            <h3 class="article-text">Resource management</h3>
+                            <p class="article-subtext">
+                                Donec ac mi tempor, gravida velit vitae, dignissim purus. Praesent pharetra lectus consequat, faucibus nibh 
+                                ullamcorper, dignissim nunc.
+                            </p>
+                        </div> 
+                    </article>
                 </div>
             </section>
             <div class="div-line"></div>
@@ -229,14 +225,18 @@
                         <textarea id="msg" name="user-message"></textarea>
                     </div>
                     <div class="option-button">
-                        <input type="checkbox" name="condition">
-                        <label for="condition">
-                            I am not a robot
-                        </label>
-                        <input type="checkbox" name="copy">
-                        <label for="send">
-                            Send me a copy
-                        </label>
+                        <div class="check-box">
+                            <input type="checkbox" name="condition">
+                            <label for="condition">
+                                I am not a robot
+                            </label>
+                        </div>
+                        <div class="check-box">
+                            <input type="checkbox" name="copy">
+                            <label for="send">
+                                Send me a copy
+                            </label>
+                        </div>
                     </div>
                     <div class="element-pair">
                         <button class="submit">Submit</button>
@@ -264,37 +264,34 @@
                 </div>
             </section>
             <div class="div-line"></div>
-            <section>
-                <div>
-                <nav class="nav-proper"> 
-                    <div>
-                        <h3>Products</h3>
-                        <ol>
-                            <li>Functionalities</li>
-                            <li>Downloads</li>
-                            <li>Integrations</li>
-                            <li>Extras</li>
-                        </ol>
-                    </div>
-                    <div>
-                        <h3>Company</h3>
-                        <ol>
-                            <li>About us</li>
-                            <li>Clients</li>
-                            <li>Resources</li>
-                            <li>Blog</li>
-                        </ol>
-                    </div> 
-                    <div>
-                        <h3>Support</h3>
-                        <ol>
-                            <li>Help center</li>
-                            <li>Tutorials</li>
-                            <li>API</li>
-                            <li>Contact us</li>
-                        </ol>
-                    </div>
-                </nav>
+            <section class="nav-proper">
+                <span class="nav-title">Products</span>
+                <div class="nav-menu">
+                    <ol>
+                        <li>Functionalities</li>
+                        <li>Downloads</li>
+                        <li>Integrations</li>
+                        <li>Extras</li>
+                    </ol>
+                </div>
+                <span class="nav-title">Company</span>
+                <div class="nav-menu">
+                    <ol>
+                        <li>About us</li>
+                        <li>Clients</li>
+                        <li>Resources</li>
+                        <li>Blog</li>
+                    </ol>
+                </div> 
+                <span class="nav-title">Support</span>
+                <div class="nav-menu">
+                    <ol>
+                        <li>Help center</li>
+                        <li>Tutorials</li>
+                        <li>API</li>
+                        <li>Contact us</li>
+                    </ol>
+                </div>
            </section> 
         </main>
         <footer>

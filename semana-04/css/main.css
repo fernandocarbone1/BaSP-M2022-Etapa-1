@@ -42,12 +42,6 @@ main {
     margin: 20px 0 10px 0;
 }
 
-.improv-card {
-    background-color: #EBEBF0;
-    padding: 20px;
-    margin: 20px 0;
-}
-
 .funct-img {
     margin-top: 20px;
 }
@@ -57,6 +51,12 @@ main {
     height: 3px;
     background-color: #aace9b;
     margin: 20px 0 10px 0;
+}
+
+.improv-card {
+    background-color: #EBEBF0;
+    padding: 20px;
+    margin: 20px 0;
 }
 
 .improv-paragraph {
@@ -70,7 +70,7 @@ main {
 }
 
 .img-improv {
-    width: 400px;
+    width: 100%;
 }
 
 .underline-getin {
@@ -96,6 +96,7 @@ main {
 
 label {
     margin: 5px 0 5px 0;
+    font-weight: bold;
 }
 
 .radio-button {
@@ -107,6 +108,7 @@ label {
 .radio-pair {
     display: flex;
     justify-content: space-between;
+    font-weight: bold;
 
 }
 
@@ -120,6 +122,7 @@ label {
     display: flex;
     justify-content: space-evenly;
 }
+
 
 .submit {
     width: 84px;
@@ -141,6 +144,68 @@ label {
 }
 
 .nav-proper {
-    margin-bottom:40px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+.nav-title {
+    margin-right: 70px;
+}
+
+.nav-menu {
+    margin-bottom: 40px;
+}
+
+
+@media screen and (min-width: 480px) {
+
+    .div-line {
+        border-top: 3px solid #AFAFC2;
+        min-width: 100%;
+        margin: 40px 0 40px 0;
+    }
+    .funct-section {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    article {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .article-text {
+        align-items: flex-start;
+    }
+
+    .funct-text {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        width: 45%;
+
+    }
+
+    .funct-text>p {
+        align-items: flex-start;
+
+    }
+
+    .funct-img {
+        display: flex;
+        align-items: flex-start;
+        padding-right: 15px;
+    }
+
+    .improv-card {
+        margin: 10px 10px;
+    }
+
+    .img-improv {
+        width: 310px;
+        height: 264px;
+    }
+}
+
