@@ -19,11 +19,12 @@ h3 {
 
 button {
     color: #373867;
+    font-size: 15px;
+    border-color: #373867;
     width: 139px;
     height: 46px;
     background-color: white;
     border-radius: 5px;
-    font-size: 12px;
 }
 
 .div-line {
