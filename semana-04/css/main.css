@@ -15,10 +15,12 @@ main {
     width: 50%;
     padding-top: 10%;
     padding-bottom: 10%;
+    border-radius: 5%;
 }
 
 .main-text {
     text-align: left;
+    height: 50%;
 }
 
 .sub-title {
@@ -78,8 +80,8 @@ main {
 }
 
 .img-improv {
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    height: 100%;
 }
 
 .underline-getin {
@@ -108,10 +110,15 @@ label {
     font-weight: bold;
 }
 
+.input-height, .radio-button {
+    height: 37px;
+}
+
 .radio-button {
     margin: 15px 0;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .radio-pair {
@@ -156,6 +163,7 @@ label {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-left: 80px;
 }
 
 .nav-title {
@@ -199,6 +207,7 @@ label {
     }
 
     .funct-text>p {
+        display: flex;
         align-items: flex-start;
 
     }
@@ -219,6 +228,7 @@ label {
 
     .img-improv {
         width: 100%;
+        height: 100%;
     }
 
     .get-section01, .get-section02 {
@@ -231,6 +241,7 @@ label {
 
     .input-name, .input-mail, .input-area, .input-priority {
         width: 45%;
+        border-radius: 10px;
     }
 
     .input-priority {
@@ -262,10 +273,25 @@ label {
 
 @media screen and (min-width: 769px) {
 
+    .main-section {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .main-photo {
+        width: 50%;
+        height: 50%;
+    }
+
     .funct-pair01, .funct-pair02 {
         display: flex;
-        flex-direction: row;
+        flex-direction: space-between;
         width: 100%;
+    }
+
+    .element-pair, .option-button {
+        display: flex;
+        justify-content: space-evenly;
     }
 
 

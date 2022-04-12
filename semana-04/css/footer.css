@@ -9,17 +9,23 @@ footer {
     padding: 0 px;
 }
 
-
-
 .address-01 {
     margin: 20px 0;
 }
 
+.div-line1 {
+    width: 100%;
+    height: 5px;
+    border-radius: 5px;
+    background-color: #AACE9B;
+    margin-bottom: 20px;
+}
+
 @media screen and (min-width: 480px) {
-    
+
     .footer-img {
         justify-content: flex-start;
-        
+
     }
 
     .footer-img, .socialmedia-icon {
@@ -35,5 +41,33 @@ footer {
 
 @media screen and (min-width: 769px) {
     footer {
+        height: 50px;
         margin-left: 220px;
+    }
+    .address {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer-img {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 254px;
+        margin-bottom: 24px;
+    }
+
+    .location {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-top: 10px;
+        margin-left: 150px;
+    }
+
+    .address-01 {
+        margin-bottom: 30px;
+        margin-top: 0;
+    }
 }

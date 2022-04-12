@@ -4,7 +4,7 @@ header {
     background-color: #373867;
     width: 100%;
     height: 51px;
-    padding: 1% 2%;
+    padding: 13px 0;
 }
 
 .header-container {
@@ -12,6 +12,8 @@ header {
     justify-content: center;
     align-items: center;
     justify-content: space-between;
+    margin: 0 10px;
+
 }
 
 .header-title {
@@ -19,4 +21,14 @@ header {
     font-weight: 700;
     font-size: 30px;
     justify-content: center;
+}
+
+@media screen and (min-width: 769) {
+    header {
+        width: 100%;
+    }
+
+    .sidebar-menu {
+        display: none;
+    }
 }
