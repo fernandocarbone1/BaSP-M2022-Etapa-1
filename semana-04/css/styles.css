@@ -3,6 +3,9 @@
 body {
     font-family: 'roboto';
     color: #373867;
+    /* display: flex;
+    flex-direction: column; */
+    height: max-content;
 }
 
 h2 {
@@ -30,4 +33,11 @@ button {
 .div-line {
     border-top: 3px solid #AFAFC2;
     margin: 40px 0 40px 0;
+}
+
+@media screen and (min-width: 769px) {
+    .aside-main {
+        display: flex;
+        flex-direction: row;
+    }
 }

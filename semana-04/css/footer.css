@@ -6,13 +6,34 @@ footer {
 .footer-img {
     display: flex;
     justify-content: space-around;
-    padding: 0 40px;
+    padding: 0 px;
 }
 
-.location {
-    margin: 20px;
-}
+
 
 .address-01 {
     margin: 20px 0;
+}
+
+@media screen and (min-width: 480px) {
+    
+    .footer-img {
+        justify-content: flex-start;
+        
+    }
+
+    .footer-img, .socialmedia-icon {
+        padding-right: 20px;
+    }
+
+    .location {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    footer {
+        margin-left: 220px;
 }
