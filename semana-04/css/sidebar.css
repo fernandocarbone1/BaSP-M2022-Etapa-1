@@ -44,9 +44,9 @@ aside>span {
 
 .contact-p {
         display: flex;
-        justify-content: flex-start;
+        flex-direction: column;
         width: 100%;
-        margin-left: 2%;
+        margin-left: 10%;
 }
 
 .street-house {
