@@ -16,5 +16,8 @@ I created the HTML file, with its syntax structure and tags.
 
 Once made the HTML part, I begun the landing stylesheet on CSS. Because of this, I had to do changes on the structure, moving some internal sections.
 
+### Week 04
+Here below, the link from the fourth week working on css flexbox and using the -@media- tag:
+https://fernandocarbone1.github.io/BaSP-M2022-Etapa-1/semana-04/index.html
 
 _By Fernando Carboné_
