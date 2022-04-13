@@ -1,5 +1,5 @@
 footer {
-    margin: 0 20px 0 20px;
+    margin: 0 0 0 20px;
     text-align: center;
 }
 
@@ -63,11 +63,10 @@ footer {
         flex-direction: column;
         align-items: flex-end;
         margin-top: 10px;
-        margin-left: 150px;
     }
 
     .address-01 {
-        margin-bottom: 30px;
-        margin-top: 0;
+        display: flex;
+        align-items: flex-end;
     }
 }
