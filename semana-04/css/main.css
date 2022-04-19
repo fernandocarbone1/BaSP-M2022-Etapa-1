@@ -12,11 +12,12 @@ main {
 }
 
 .main-photo {
-    width: 50%;
-    margin: 30px 0;
+    width: 318px;
+    height: 226px;
+    /* margin-top: 30px; */
+    margin-bottom: 15px;
     border-radius: 5px;
 }
-
 
 .main-text {
     text-align: left;
@@ -73,6 +74,8 @@ article {
 
 .improv-card {
     background-color: #EBEBF0;
+    width: 318px;
+    height: 455px;
     padding: 20px;
     margin: 20px 0;
 }
@@ -88,8 +91,8 @@ article {
 }
 
 .img-improv {
-    width: 100%;
-    height: 100%;
+    width: 310px;
+    height: 264px;
     border-radius: 5px;
 }
 
@@ -196,6 +199,7 @@ label {
         display: flex;
         flex-wrap: wrap;
     }
+    
 
     article {
         width: 100%;
@@ -234,7 +238,8 @@ label {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        width: 40%;
+        width: 100%;
+        height: 100%;
         margin: 10px 10px;
     }
 

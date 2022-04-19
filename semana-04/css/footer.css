@@ -22,6 +22,7 @@ footer {
     margin-bottom: 20px;
 }
 
+
 @media screen and (min-width: 480px) {
 
     .footer-img {
@@ -30,12 +31,6 @@ footer {
 
     .footer-img, .socialmedia-icon {
         padding-right: 20px;
-    }
-
-    .location {
-        display: flex;
-        align-items: flex-start;
-        flex-direction: column;
     }
 
     .address-01 {
@@ -68,13 +63,9 @@ footer {
         width: 254px;
     }
 
-    .location {
-        display: flex;
-        text-align: end;
-    }
-
     .address-01 {
         display: flex;
+        justify-content: end;
     }
 
     .copyright-item {
