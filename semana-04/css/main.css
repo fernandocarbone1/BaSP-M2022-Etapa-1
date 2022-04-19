@@ -22,6 +22,7 @@ main {
 .main-text {
     text-align: left;
     height: 50%;
+    margin-right: 10px;
 }
 
 .sub-title {
@@ -296,6 +297,10 @@ label {
     }
 
     .main-photo {
+        width: 50%;
+    }
+
+    .funct-section {
         width: 50%;
     }
 
