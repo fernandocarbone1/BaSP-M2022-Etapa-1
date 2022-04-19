@@ -18,11 +18,14 @@ h3 {
     margin: 15px 0 15px 0;
 }
 
+a {
+    text-decoration: none;
+}
+
 button {
     color: #373867;
     font-size: 15px;
-    border-color: #373867;
-    width: 139px;
+    width: 98px;
     height: 46px;
     background-color: white;
     border-radius: 5px;

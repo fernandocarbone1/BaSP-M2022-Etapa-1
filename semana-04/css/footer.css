@@ -1,6 +1,6 @@
 footer {
     margin: 0 0 0 20px;
-    text-align: center;
+    padding-right: 20px;
 }
 
 .footer-img {
@@ -11,6 +11,7 @@ footer {
 
 .address-01 {
     margin: 20px 0;
+    text-align: center;
 }
 
 .div-line1 {
@@ -25,7 +26,6 @@ footer {
 
     .footer-img {
         justify-content: flex-start;
-
     }
 
     .footer-img, .socialmedia-icon {
@@ -37,12 +37,23 @@ footer {
         align-items: flex-start;
         flex-direction: column;
     }
+
+    .address-01 {
+        text-align: left;
+        margin: 20px 0 0 0;
+    }
+
+    .copyright-item {
+        text-align: left;
+    }
+
 }
 
 @media screen and (min-width: 769px) {
     footer {
         height: 50px;
         margin-left: 220px;
+        margin-bottom: 40px;
     }
     .address {
         width: 100%;
@@ -55,18 +66,21 @@ footer {
         justify-content: space-between;
         align-items: center;
         width: 254px;
-        margin-bottom: 24px;
     }
 
     .location {
         display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        margin-top: 10px;
+        text-align: end;
     }
 
     .address-01 {
         display: flex;
-        align-items: flex-end;
+    }
+
+    .copyright-item {
+        max-width: 100%;
+        display: flex;
+        justify-content: end;
+        align-content: flex-end;
     }
 }

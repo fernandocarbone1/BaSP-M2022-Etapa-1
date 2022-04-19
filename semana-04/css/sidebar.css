@@ -47,7 +47,7 @@ aside>span {
         flex-direction: column;
         width: 100%;
         justify-content: space-between;
-        align-items: center;
+        padding-left: 10px;
 }
 
 .street-house {
