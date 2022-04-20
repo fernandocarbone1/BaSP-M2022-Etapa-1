@@ -10,8 +10,15 @@ footer {
 }
 
 .address-01 {
-    margin: 20px 0;
+    display: flex;
+    justify-content: center;
     text-align: center;
+    margin: 20px 0;
+}
+
+.copyright-item {
+    max-width: 250px;
+    padding-left: 40px;
 }
 
 .div-line1 {
@@ -34,12 +41,16 @@ footer {
     }
 
     .address-01 {
-        text-align: left;
+        text-align: end;
         margin: 20px 0 0 0;
     }
 
     .copyright-item {
-        text-align: left;
+        text-align: end;
+    }
+
+    .location {
+        text-align: end;
     }
 
 }

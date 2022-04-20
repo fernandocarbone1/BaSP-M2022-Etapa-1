@@ -86,8 +86,10 @@ article {
 
 .button-improv {
     background-color: #EBEBF0;
-    width: 68px;
-    height: 34px;
+    border: 1px solid #373867;
+    box-sizing: border-box;
+    border-radius: 4x;
+    font-size: 12px;
 }
 
 .img-improv {
@@ -294,8 +296,12 @@ label {
     }
 
     .funct-section {
-        width: 100%;
+        width: 47%;
         margin-left: 25px;
+    }
+
+    article {
+        margin: 0 5.5%;
     }
 
     .funct-pair01, .funct-pair02 {
