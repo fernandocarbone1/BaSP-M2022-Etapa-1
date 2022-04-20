@@ -10,15 +10,18 @@ footer {
 }
 
 .address-01 {
-    display: flex;
-    justify-content: center;
     text-align: center;
     margin: 20px 0;
 }
 
+
+.location>div:nth-of-type(2) {
+    align-self: center;
+}
+
 .copyright-item {
     max-width: 250px;
-    padding-left: 40px;
+    text-align: center;
 }
 
 .div-line1 {
@@ -29,6 +32,14 @@ footer {
     margin-bottom: 20px;
 }
 
+
+@media screen and (max-width: 479px) {
+    .location {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
 
 @media screen and (min-width: 480px) {
 
@@ -41,16 +52,19 @@ footer {
     }
 
     .address-01 {
-        text-align: end;
         margin: 20px 0 0 0;
     }
 
-    .copyright-item {
-        text-align: end;
+    /* .location {
+        text-align: left;
+    } */
+
+    .address-01 {
+        text-align: left;
     }
 
-    .location {
-        text-align: end;
+    .location>div:nth-of-type(2) {
+        align-content: left;
     }
 
 }
