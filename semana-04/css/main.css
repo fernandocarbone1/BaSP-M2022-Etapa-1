@@ -22,7 +22,6 @@ main {
 .main-text {
     text-align: left;
     height: 50%;
-    margin-right: 10px;
 }
 
 .sub-title {
@@ -214,13 +213,10 @@ label {
     }
 
     .funct-text {
-        display: flex;
         justify-content: center;
-        flex-direction: column;
         width: 200px;
         height: 200px;
         padding-left: 10px;
-
     }
 
     .funct-text>p {
@@ -232,16 +228,13 @@ label {
     .funct-img {
         display: flex;
         align-items: flex-start;
-        /* padding-right: 15px; */
     }
 
     .improv-card {
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
-        width: 100%;
-        height: 100%;
-        margin: 10px 10px;
+        justify-content: space-between;
+        margin: 10px 20px;
     }
 
     .img-improv {
@@ -288,7 +281,6 @@ label {
     }
 }
 
-
 @media screen and (min-width: 769px) {
 
     .main-section {
@@ -298,10 +290,12 @@ label {
 
     .main-photo {
         width: 50%;
+        height: 50%;
     }
 
     .funct-section {
-        width: 50%;
+        width: 100%;
+        margin-left: 25px;
     }
 
     .funct-pair01, .funct-pair02 {
@@ -310,11 +304,13 @@ label {
         width: 100%;
     }
 
+    .improv-card {
+        margin: 20px 50px;
+    }
+
     .element-pair, .option-button {
         display: flex;
         justify-content: space-evenly;
     }
-
-
 }
 

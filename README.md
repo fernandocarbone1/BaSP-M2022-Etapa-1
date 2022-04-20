@@ -20,4 +20,8 @@ Once made the HTML part, I begun the landing stylesheet on CSS. Because of this,
 Here below, the link from the fourth week working on css flexbox and using the -@media- tag:
 https://fernandocarbone1.github.io/BaSP-M2022-Etapa-1/semana-04/index.html
 
+### Week 05
+The link from the fifth week, with the JavaScript exercises:
+https://fernandocarbone1.github.io/BaSP-M2022-Etapa-1/semana-05/index.html
+
 _By Fernando Carboné_
