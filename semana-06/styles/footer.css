@@ -1,6 +1,5 @@
 footer {
-    margin: 0 0 0 20px;
-    padding-right: 20px;
+    padding: 20px;
 }
 
 .footer-img {
@@ -72,7 +71,6 @@ footer {
 @media screen and (min-width: 769px) {
     footer {
         height: 50px;
-        margin-left: 220px;
         margin-bottom: 40px;
     }
     .address {
