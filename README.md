@@ -24,4 +24,8 @@ https://fernandocarbone1.github.io/BaSP-M2022-Etapa-1/semana-04/index.html
 The link from the fifth week, with the JavaScript exercises:
 https://fernandocarbone1.github.io/BaSP-M2022-Etapa-1/semana-05/index.html
 
+### Week 06
+The link from the sixth week (DOM JavaScript):
+https://fernandocarbone1.github.io/BaSP-M2022-Etapa-1/semana-06/views/index.html
+
 _By Fernando Carboné_
