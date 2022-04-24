@@ -1,9 +1,23 @@
-
-
 window.onload = function() {
     document.getElementById("formLogIn").addEventListener('submit', function(event) {
         event.preventDefault()
 })}
+
+// verify mail:
+
+function ermail(){
+    var email = document.getElementById('email').value;
+    var validateEmail = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
+    if(!validateEmail.test(email)) {
+        document.getElementById('email').style.border = '3px solid red';
+        document.getElementById('errorMail').classList.remove('pMail');
+    }
+    else {
+        document.getElementById('email').style.border = '3px solid green';
+    }
+}
+
+// verify password:
 
 function password1() {
     var alpha = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "ñ", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
@@ -32,6 +46,19 @@ function password1() {
     }
 }
 
+// focus:
+
+function verifyMail(){
+    document.getElementById('email').style.border = '3px solid blue'
+    document.getElementById('errorMail').classList.add('pMail')
+}
+
+function verifyPassword(){
+    document.getElementById('password').style.border = '3px solid blue'
+    document.getElementById('errorPassword').classList.add('pPassword')
+}
+
 function handleOnSubmit() {
-    password1()
+    password1();
+    ermail();
 }

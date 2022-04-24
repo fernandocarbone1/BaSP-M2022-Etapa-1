@@ -2,9 +2,18 @@
     display: flex;
     flex-direction: column;
     font-weight: bold;
-    margin: 20px 40px 20px 20px;
     border-radius: 5px;
     width: 100%;
+}
+
+main {
+    margin: 40px;
+    border: 5px solid black;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
 }
 
 label {
@@ -12,11 +21,12 @@ label {
 }
 
 .input-height {
-    width: 95%;
+    width: 100%;
     height: 37px;
 }
 
-.pName, .plastName, .pID, .pPhone, .pAddress, .pCity, .pZip, p.pPassword, .pPassword2 {
+.pName, .plastName, .pID, .pPhone, .pAddress, .pCity,
+ .pZip, p.pPassword, .pPassword2, .pMail {
     display: none;
 }
 
@@ -25,11 +35,35 @@ label {
     width: 95%;
 }
 
+
+.pair-input {
+    padding: 10px;
+}
+
+.confirm-pass {
+    padding: 3%;
+}
+
+.form-submit {
+    padding-left: 3.5%;
+}
+
 @media screen and (min-width: 479px){
     .pair-input {
         display: flex;
         flex-direction: row;
-        width: 100%;
+        justify-content: space-between;
     }
+
+    .input-form {
+        width: 95%;
+        padding: 2%;
+    }
+
+    .confirm-pass {
+        width: 47%;
+        padding-left: 1.5%;
+    }
+
 }
     

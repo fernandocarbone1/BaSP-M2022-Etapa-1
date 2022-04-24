@@ -7,12 +7,13 @@
     <link rel='stylesheet' type='text/css' media='screen' href='../styles/header.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='../styles/footer.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='../styles/employee-signup.css'>
+    <link rel='html' type='html' media='screen' href='../views/index.html'>
     <title>Trackgenix SA Employee Signup</title>
 </head>
 <body>
     <header>
         <div class="header-container">
-            <img src="../assets/icons/trackgenix-logo.png" alt="Trackgenix" width="50px">
+            <a href="../views/index.html"><img src="../assets/icons/trackgenix-logo.png" alt="Trackgenix" width="50px"></a>
             <h1 class="header-title">
                 Trackgenix SA
             </h1>
@@ -20,8 +21,8 @@
         </div>
     </header>
     <main>
-        <h1>Sign Up</h1>
-        <form id="formSignUp" action="/my-handling-form-page" onsubmit = handleOnSubmit() onfocus="" onblur="">
+        <h2>Sign Up</h2>
+        <form id="formSignUp" action="/my-handling-form-page" onsubmit = handleOnSubmit()>
             <div class="get-section01">
                 <div class="pair-input">
                     <div class="input-form">
@@ -91,29 +92,30 @@
                         <label for="Email">
                             Email:
                         </label>
-                        <input class="input-height" type="email" name="Email">
+                        <input id="email" class="input-height" type="email">
+                        <p id="errorMail" class="pMail">Invalid value</p>
                     </div>
                     <div class="input-form">
                         <label for="Password">
                             Password:
                         </label>
                         <input id="password" class="input-height" type="password">
-                        <p id="errorPassword" class="pPassword">Invalid password</p>
+                        <p id="errorPassword" class="pPassword">Invalid value</p>
                     </div>
                 </div>
-                <div class="pair-input">
                     <div class="input-form">
+                        <div class="confirm-pass">
                         <label for="Password">
                             Confirm password:
                         </label>
                         <input id="confirmPassword" class="input-height" type="password">
-                        <p id="errorPassword2" class="pPassword2">Invalid comfirm</p>
+                        <p id="errorPassword2" class="pPassword2">Invalid value</p>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="form-submit">
                 <button class="signUp" id="signUp">Create</button>
-                <button class="back">Back</button>
             </div>
         </form>
     </main>
