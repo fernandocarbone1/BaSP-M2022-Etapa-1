@@ -129,6 +129,7 @@ footer {
 }
 
 @media screen and (min-width: 479px){
+
     .pair-input {
         display: flex;
         flex-direction: row;

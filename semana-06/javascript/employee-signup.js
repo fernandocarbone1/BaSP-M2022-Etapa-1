@@ -11,13 +11,13 @@ function firstNameInput(){
     for (var i = [0]; i < name.length; i ++) {
         if (!alpha.includes(name[i].toLowerCase())) {
             document.getElementById('name').style.border = '3px solid red';
-            document.getElementById('errorMessage').classList.remove('pName')
+            document.getElementById('errorName').classList.remove('pName')
         }
     }
 
-    if (name.length < 6) {
+    if (name.length < 3) {
         document.getElementById('name').style.border = "3px solid red";
-        document.getElementById('errorMessage').classList.remove("pName");
+        document.getElementById('errorName').classList.remove("pName");
 
     } else {
         document.getElementById('name').style.border = "3px solid green";
@@ -35,7 +35,7 @@ function lastNameInput(){
         }
     }
 
-    if (name.length < 6) {
+    if (name.length < 3) {
         document.getElementById('lastName').style.border = "3px solid red";
         document.getElementById('errorlastMessage').classList.remove("plastName");
 
@@ -86,7 +86,7 @@ function addressInput() {
     }
 }
 
-function cityName() {
+function cityInput() {
     var city = document.getElementById('cityName').value;
     if (city.length < 3) {
         document.getElementById('cityName').style.border = '3px solid red';
@@ -96,9 +96,9 @@ function cityName() {
     }
 }
 
-function zipCode() {
+function zipCodeCity() {
     var zipCode = document.getElementById('zipCode').value;
-    if (zipCode.length < 4 || zipCode > 5) {
+    if (zipCode.length < 4  || zipCode.length > 5) {
         document.getElementById('zipCode').style.border = '3px solid red';
         document.getElementById('errorZip').classList.remove('pZip');
     }
@@ -107,7 +107,7 @@ function zipCode() {
     }
 }
 
-function email(){
+function eMail(){
     var email = document.getElementById('email').value;
     var validateEmail = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
     if(!validateEmail.test(email)) {
@@ -132,8 +132,9 @@ function password1() {
             number++;
         }
     }
-    if (password.length - 1 > 8) {
+    if (password.length - 1 >= 8){
         document.getElementById('password').style.border = "3px solid green";
+        console.log("Funciona el if")
     } else {
         document.getElementById('password').style.border = "3px solid red";
         document.getElementById("errorPassword").classList.remove("pPassword");
@@ -146,32 +147,97 @@ function password1() {
     }
 }
 
-function confirmPassword() {
+function confirmPassword2() {
     var pass = document.getElementById("password").value;
     var pass2 = document.getElementById("confirmPassword").value;
     if (pass2 === pass) {
         document.getElementById("confirmPassword").style.border = "3px solid green";
     } else {
-        document.getElementById("errorPassword2").classList.remove("pPassword2");
         document.getElementById("confirmPassword").style.border = "3px solid red";
+        document.getElementById("errorPassword2").classList.remove("pPassword2");
     }
+
     if (pass === ' ')
-        document.getElementById("errorPassword2").classList.remove("pPassword2");
         document.getElementById("confirmPassword").style.border = "3px solid red";
+        document.getElementById("errorPassword2").classList.remove("pPassword2");
+}
+
+// function verify onfocus/onblur
+
+// First Name
+function verifyFirstName(){
+    document.getElementById('name').style.border = '3px solid blue'
+    document.getElementById('errorName').classList.add('pName')
+}
+
+// Last Name
+function verifyLastName(){
+    document.getElementById('lastName').style.border = '3px solid blue'
+    document.getElementById('errorlastMessage').classList.add('plastName')
+}
+
+// Id Number
+function verifyIDNumber(){
+    document.getElementById('identNumber').style.border = '3px solid blue'
+    document.getElementById('errorID').classList.add('pID')
+}
+
+// PhoneNumber
+function verifyPhone(){
+    document.getElementById('phone').style.border = '3px solid blue'
+    document.getElementById('errorPhone').classList.add('pPhone')
+}
+
+// Address
+function verifyAddress(){
+    document.getElementById('address').style.border = '3px solid blue'
+    document.getElementById('errorAddress').classList.add('pAddress')
+}
+
+// City
+function verifyCity(){
+    document.getElementById('cityName').style.border = '3px solid blue'
+    document.getElementById('errorCity').classList.add('pCity')
+}
+
+// ZipCode
+function verifyZip(){
+    document.getElementById('zipCode').style.border = '3px solid blue'
+    document.getElementById('errorZip').classList.add('pZip')
 }
 
 
+// Email
+function verifyMail(){
+    document.getElementById('email').style.border = '3px solid blue'
+    document.getElementById('errorMail').classList.add('pMail')
+}
+
+
+// Password_01
+function verifyPassword(){
+    document.getElementById('password').style.border = '3px solid blue'
+    document.getElementById('errorPassword').classList.add('pPassword')
+}
+
+// Password_02
+function verifyConfirm(){
+    document.getElementById('confirmPassword').style.border = '3px solid blue'
+    document.getElementById('errorPassword2').classList.add('pPassword2')
+}
+
+// HandleOnSubmit
 function handleOnSubmit() {
     firstNameInput();
     lastNameInput();
     idNumber();
     phoneNumber();
     addressInput();
-    cityName();
-    zipCode();
-    email();
+    cityInput();
+    zipCodeCity();
+    eMail();
     password1();
-    confirmPassword();
+    confirmPassword2();
 }
 
 console.log('funciona todo')

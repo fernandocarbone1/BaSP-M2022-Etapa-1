@@ -46,7 +46,8 @@ function password1() {
     }
 }
 
-// focus:
+// Focus:
+
 
 function verifyMail(){
     document.getElementById('email').style.border = '3px solid blue'
@@ -57,6 +58,9 @@ function verifyPassword(){
     document.getElementById('password').style.border = '3px solid blue'
     document.getElementById('errorPassword').classList.add('pPassword')
 }
+
+
+// HandleOnSubmit
 
 function handleOnSubmit() {
     password1();

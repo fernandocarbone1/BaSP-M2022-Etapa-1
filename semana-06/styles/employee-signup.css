@@ -18,6 +18,7 @@ h2 {
 
 label {
     height: 37px;
+
 }
 
 .input-height {
@@ -25,8 +26,8 @@ label {
     height: 37px;
 }
 
-.pName, .plastName, .pID, .pPhone, .pAddress, .pCity,
- .pZip, p.pPassword, .pPassword2, .pMail {
+.pName, .plastName, .pID, .pPhone, .pAddress, .pCity,  .pMail,
+ .pZip, .pPassword, .pPassword2 {
     display: none;
 }
 
