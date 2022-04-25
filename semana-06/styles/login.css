@@ -83,6 +83,10 @@ label {
     display: none;
 }
 
+#errorMail, #errorPassword {
+    margin: 10px 0;
+}
+
 
 /* footer */
 

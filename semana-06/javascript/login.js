@@ -59,10 +59,23 @@ function verifyPassword(){
     document.getElementById('errorPassword').classList.add('pPassword')
 }
 
+// variables input
+
+var emailPrint = document.getElementById('email');
+var passwordPrint = document.getElementById('password');
+
+
+function printForm(){
+    alert(
+        "Your email is: " + emailPrint.value + 
+        "\nYour password is: " + password.value);
+    
+}
 
 // HandleOnSubmit
 
 function handleOnSubmit() {
     password1();
     ermail();
+    printForm();
 }
