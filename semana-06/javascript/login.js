@@ -3,6 +3,11 @@ window.onload = function() {
         event.preventDefault()
 })}
 
+// boolean variables
+
+var inputA
+var inputB
+
 // verify mail:
 
 function ermail(){
@@ -11,9 +16,11 @@ function ermail(){
     if(!validateEmail.test(email)) {
         document.getElementById('email').style.border = '3px solid red';
         document.getElementById('errorMail').classList.remove('pMail');
+        inputA = false
     }
     else {
         document.getElementById('email').style.border = '3px solid green';
+        inputA = true
     }
 }
 
@@ -34,15 +41,22 @@ function password1() {
     }
     if (password.length - 1 > 8) {
         document.getElementById('password').style.border = "3px solid green";
+        inputB = true
     } else {
         document.getElementById('password').style.border = "3px solid red";
         document.getElementById("errorPassword").classList.remove("pPassword");
+        inputB = false
+
     }
     if (letter <= 0 || number <= 0 || password.indexOf(" ") > -1) {
         document.getElementById('password').style.border = "3px solid red";
         document.getElementById("errorPassword").classList.remove("pPassword");
+        inputB = false
+
     } else {
         document.getElementById('password').style.border = "3px solid green";
+        inputB = true
+
     }
 }
 
@@ -65,16 +79,27 @@ var emailPrint = document.getElementById('email');
 var passwordPrint = document.getElementById('password');
 
 
-function printForm(){
+// window.alert()
+
+function confirmSubmit(){
     alert(
         "Your email is: " + emailPrint.value + 
         "\nYour password is: " + password.value);  
 }
+
+function confirm() {
+    if (inputA == true && inputB) {
+        alert(confirmSubmit())
+    } else {
+        alert('Please, enter valid values')
+    }
+}
+
 
 // HandleOnSubmit
 
 function handleOnSubmit() {
     password1();
     ermail();
-    printForm();
+    confirm();
 }

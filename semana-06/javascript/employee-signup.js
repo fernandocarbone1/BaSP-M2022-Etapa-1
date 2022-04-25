@@ -4,6 +4,21 @@ window.onload = function() {
     })
 }
 
+// boolean variables
+
+var inputA
+var inputB
+var inputC
+var inputD
+var inputE
+var inputF
+var inputG
+var inputH
+var inputI
+var inputJ
+
+
+
 function firstNameInput(){
     var alpha = [" ", "a", "b", "c", "d", "e", "f", "g", "h", "j", "k", 
     "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "x", "y", "z"]
@@ -12,15 +27,18 @@ function firstNameInput(){
         if (!alpha.includes(name[i].toLowerCase())) {
             document.getElementById('name').style.border = '3px solid red';
             document.getElementById('errorName').classList.remove('pName')
+            inputA = false
         }
     }
 
     if (name.length < 3) {
         document.getElementById('name').style.border = "3px solid red";
         document.getElementById('errorName').classList.remove("pName");
+        inputA = false
 
     } else {
         document.getElementById('name').style.border = "3px solid green";
+        inputA = true
     }
 }
 
@@ -32,15 +50,18 @@ function lastNameInput(){
         if (!alpha.includes(name[i].toLowerCase())) {
             document.getElementById('lastName').style.border = '3px solid red';
             document.getElementById('errorlastMessage').classList.remove('plastName')
+            inputB = false
         }
     }
 
     if (name.length < 3) {
         document.getElementById('lastName').style.border = "3px solid red";
         document.getElementById('errorlastMessage').classList.remove("plastName");
+        inputB = false
 
     } else {
         document.getElementById('lastName').style.border = "3px solid green";
+        inputB = true
     }
 }
 
@@ -49,13 +70,17 @@ function idNumber() {
     if (id.length > 6) {
         if (id.length <= 8) {
             document.getElementById('identNumber').style.border = '3px solid green';
+            inputC = true
+
         } else {
             document.getElementById('identNumber').style.border = '3px solid red';
             document.getElementById('errorID').classList.remove('pID')
+            inputC = false
         }
     } else {
         document.getElementById('identNumber').style.border = '3px solid red';
         document.getElementById('errorID').classList.remove('pID')
+        inputC = false
     }
 }
 
@@ -65,8 +90,10 @@ function phoneNumber() {
     if (phone.length < 10 || phone.length > 10) {
         document.getElementById("phone").style.border = "3px solid red";
         document.getElementById("errorPhone").classList.remove("pPhone");
+        inputD = false
     } else {
         document.getElementById("phone").style.border = "3px solid green";
+        inputD = true
     }
 }
 
@@ -75,14 +102,17 @@ function addressInput() {
     if (address.indexOf(" ") > -1 && address.indexOf(" ") < address.length - 2) {
         if (address.length > 5) {
             document.getElementById("address").style.border = '3px solid green';
+            inputE = true
         } else {
             document.getElementById("address").style.border = '3px solid red';
             document.getElementById('errorAddress').classList.remove('pAddress');
+            inputE = false
         }
 
     } else {
         document.getElementById("address").style.border = '3px solid red';
         document.getElementById('errorAddress').classList.remove('pAddress');
+        inputE = false
     }
 }
 
@@ -91,8 +121,10 @@ function cityInput() {
     if (city.length < 3) {
         document.getElementById('cityName').style.border = '3px solid red';
         document.getElementById('errorCity').classList.remove('pCity');
+        inputF = false
     } else {
         document.getElementById('cityName').style.border = '3px solid green';
+        inputF = true
     }
 }
 
@@ -101,9 +133,11 @@ function zipCodeCity() {
     if (zipCode.length < 4  || zipCode.length > 5) {
         document.getElementById('zipCode').style.border = '3px solid red';
         document.getElementById('errorZip').classList.remove('pZip');
+        inputG = false
     }
     else {
         document.getElementById('zipCode').style.border = '3px solid green'
+        inputG = true
     }
 }
 
@@ -113,9 +147,11 @@ function eMail(){
     if(!validateEmail.test(email)) {
         document.getElementById('email').style.border = '3px solid red';
         document.getElementById('errorMail').classList.remove('pMail');
+        inputH = false
     }
     else {
         document.getElementById('email').style.border = '3px solid green';
+        inputH = true
     }
 }
 
@@ -134,16 +170,20 @@ function password1() {
     }
     if (password.length - 1 >= 8){
         document.getElementById('password').style.border = "3px solid green";
-        console.log("Funciona el if")
+        inputI = true
+
     } else {
         document.getElementById('password').style.border = "3px solid red";
         document.getElementById("errorPassword").classList.remove("pPassword");
+        inputI = false
     }
     if (letter <= 0 || number <= 0 || password.indexOf(" ") > -1) {
         document.getElementById('password').style.border = "3px solid red";
         document.getElementById("errorPassword").classList.remove("pPassword");
+        inputI = false
     } else {
         document.getElementById('password').style.border = "3px solid green";
+        inputI = true
     }
 }
 
@@ -155,11 +195,13 @@ function confirmPassword2() {
     } else {
         document.getElementById("confirmPassword").style.border = "3px solid red";
         document.getElementById("errorPassword2").classList.remove("pPassword2");
+        inputJ = false
     }
 
     if (pass === ' ')
         document.getElementById("confirmPassword").style.border = "3px solid red";
         document.getElementById("errorPassword2").classList.remove("pPassword2");
+        inputJ = false
 }
 
 // function verify onfocus/onblur
@@ -243,19 +285,28 @@ var confirmPasswordPrint = document.getElementById('confirmPassword');
 
 // window.alert()
 
-function printForm(){
+function confirmSubmit() {
     alert(
-        "Your first name is: " + firstNamePrint.value +
-        "\nYour last name is: " + lastNamePrint.value +
-        "\nYour ID Number is: " + iDNumberPrint.value +
-        "\nYour phone number is: " + phonePrint.value +
-        "\nYour address is: " + addressPrint.value +
-        "\nYour city is: " + cityPrint.value +
-        "\nYour zip code is: " + zipPrint.value +
-        "\nYour email is: " + emailPrint.value +
-        "\nYour password is: " + passwordPrint.value +
-        "\nYour confirm password is: " + confirmPasswordPrint.value
-    )
+            "Your first name is: " + firstNamePrint.value +
+            "\nYour last name is: " + lastNamePrint.value +
+            "\nYour ID Number is: " + iDNumberPrint.value +
+            "\nYour phone number is: " + phonePrint.value +
+            "\nYour address is: " + addressPrint.value +
+            "\nYour city is: " + cityPrint.value +
+            "\nYour zip code is: " + zipPrint.value +
+            "\nYour email is: " + emailPrint.value +
+            "\nYour password is: " + passwordPrint.value +
+            "\nYour confirm password is: " + confirmPasswordPrint.value
+        )
+    }
+
+function confirm() {
+    if (inputA == true && inputB == true && inputC == true && inputD == true && inputE ==  true && inputF == true && inputG == true
+         && inputH == true && inputI == true) {
+        alert(confirmSubmit())
+    } else {
+        alert('Please, enter valid values')
+    }
 }
 
 
@@ -271,5 +322,5 @@ function handleOnSubmit() {
     eMail();
     password1();
     confirmPassword2();
-    printForm();
+    confirm();
 }
