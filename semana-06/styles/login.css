@@ -135,6 +135,10 @@ footer {
 
 @media screen and (min-width: 480px) {
 
+    footer {
+        margin-left: 20px;
+    }
+
     .footer-img {
         justify-content: flex-start;
     }
@@ -158,13 +162,13 @@ footer {
     .location>div:nth-of-type(2) {
         align-content: left;
     }
-
 }
 
 @media screen and (min-width: 769px) {
     footer {
         height: 50px;
-        margin: 40px;
+        margin: 20px;
+        padding-left: 20px;
     }
     .address {
         width: 100%;

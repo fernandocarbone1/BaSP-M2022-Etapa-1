@@ -226,6 +226,38 @@ function verifyConfirm(){
     document.getElementById('errorPassword2').classList.add('pPassword2')
 }
 
+
+// variables input
+
+var firstNamePrint = document.getElementById('name')
+var lastNamePrint = document.getElementById('lastName')
+var iDNumberPrint = document.getElementById('identNumber')
+var phonePrint = document.getElementById('phone')
+var addressPrint = document.getElementById('address')
+var cityPrint = document.getElementById('cityName')
+var zipPrint = document.getElementById('zipCode');
+var emailPrint = document.getElementById('email');
+var passwordPrint = document.getElementById('password');
+var confirmPasswordPrint = document.getElementById('confirmPassword');
+
+
+
+function printForm(){
+    alert(
+        "Your first name is: " + firstNamePrint.value +
+        "\nYour last name is: " + lastNamePrint.value +
+        "\nYour ID Number is: " + iDNumberPrint.value +
+        "\nYour phone number is: " + phonePrint.value +
+        "\nYour address is: " + addressPrint.value +
+        "\nYour city is: " + cityPrint.value +
+        "\nYour zip code is: " + zipPrint.value +
+        "\nYour email is: " + emailPrint.value +
+        "\nYour password is: " + passwordPrint.value +
+        "\nYour confirm password is: " + confirmPasswordPrint.value
+    )
+}
+
+
 // HandleOnSubmit
 function handleOnSubmit() {
     firstNameInput();
@@ -238,6 +270,7 @@ function handleOnSubmit() {
     eMail();
     password1();
     confirmPassword2();
+    printForm();
 }
 
-console.log('funciona todo')
+console.log("Funciona todo")

@@ -68,8 +68,7 @@ var passwordPrint = document.getElementById('password');
 function printForm(){
     alert(
         "Your email is: " + emailPrint.value + 
-        "\nYour password is: " + password.value);
-    
+        "\nYour password is: " + password.value);  
 }
 
 // HandleOnSubmit
