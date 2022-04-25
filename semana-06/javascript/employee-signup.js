@@ -241,6 +241,7 @@ var passwordPrint = document.getElementById('password');
 var confirmPasswordPrint = document.getElementById('confirmPassword');
 
 
+// window.alert()
 
 function printForm(){
     alert(
@@ -272,5 +273,3 @@ function handleOnSubmit() {
     confirmPassword2();
     printForm();
 }
-
-console.log("Funciona todo")
