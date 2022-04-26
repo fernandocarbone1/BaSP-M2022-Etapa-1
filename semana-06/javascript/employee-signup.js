@@ -303,8 +303,9 @@ function confirmSubmit() {
 function confirm() {
     if (inputA == true && inputB == true && inputC == true && inputD == true && inputE ==  true && inputF == true && inputG == true
          && inputH == true && inputI == true) {
-        alert(confirmSubmit())
-    } else {
+        confirmSubmit()
+    }
+    else {
         alert('Please, enter valid values')
     }
 }
