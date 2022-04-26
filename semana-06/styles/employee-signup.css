@@ -27,7 +27,7 @@ label {
 }
 
 .pName, .plastName, .pID, .pPhone, .pAddress, .pCity,  .pMail,
- .pZip, .pPassword, .pPassword2 {
+ .pZip, .pPassword, .pPassword2, .pDate {
     display: none;
 }
 

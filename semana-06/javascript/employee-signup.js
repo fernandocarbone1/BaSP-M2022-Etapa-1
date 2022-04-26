@@ -16,6 +16,7 @@ var inputG
 var inputH
 var inputI
 var inputJ
+var inputK
 
 
 
@@ -84,6 +85,27 @@ function idNumber() {
     }
 }
 
+function checkDOB() {
+    var dob = document.getElementById("dateOfBirth").value
+    console.log("dob", typeof dob)
+    var dateDOB = new Date(dob).getTime();
+
+    var diff = new Date().getTime() - dateDOB;
+
+    console.log(Math.trunc(diff / (1000 * 60 * 60 * 24 * 365.25)));
+
+    age = Math.trunc(diff / (1000 * 60 * 60 * 24 * 365.25));
+    if (age >= 18) {
+        document.getElementById('dateOfBirth').style.border = '3px solid green';
+        inputK = true
+    } else {
+        document.getElementById('dateOfBirth').style.border = '3px solid red';
+        document.getElementById('errorDate').classList.remove('pDate')
+        inputK = true
+        alert('At least your age must be 18 years old')
+    }
+
+}
 
 function phoneNumber() {
     var phone = document.getElementById("phone").value;
@@ -197,14 +219,9 @@ function confirmPassword2() {
         document.getElementById("errorPassword2").classList.remove("pPassword2");
         inputJ = false
     }
-
-    if (pass === ' ')
-        document.getElementById("confirmPassword").style.border = "3px solid red";
-        document.getElementById("errorPassword2").classList.remove("pPassword2");
-        inputJ = false
 }
 
-// function verify onfocus/onblur
+// Focus:
 
 // First Name
 function verifyFirstName(){
@@ -223,6 +240,13 @@ function verifyIDNumber(){
     document.getElementById('identNumber').style.border = '3px solid blue'
     document.getElementById('errorID').classList.add('pID')
 }
+
+// dateOfBirth
+function verifyDate() {
+    document.getElementById('dateOfBirth').style.border = '3px solid blue'
+    document.getElementById('errorDate').classList.add('pDate')
+}
+
 
 // PhoneNumber
 function verifyPhone(){
@@ -274,6 +298,7 @@ function verifyConfirm(){
 var firstNamePrint = document.getElementById('name')
 var lastNamePrint = document.getElementById('lastName')
 var iDNumberPrint = document.getElementById('identNumber')
+var dobBirthPrint = document.getElementById('dateOfBirth')
 var phonePrint = document.getElementById('phone')
 var addressPrint = document.getElementById('address')
 var cityPrint = document.getElementById('cityName')
@@ -290,6 +315,7 @@ function confirmSubmit() {
             "Your first name is: " + firstNamePrint.value +
             "\nYour last name is: " + lastNamePrint.value +
             "\nYour ID Number is: " + iDNumberPrint.value +
+            "\nYour age is: " + dobBirthPrint.value +
             "\nYour phone number is: " + phonePrint.value +
             "\nYour address is: " + addressPrint.value +
             "\nYour city is: " + cityPrint.value +
@@ -302,7 +328,7 @@ function confirmSubmit() {
 
 function confirm() {
     if (inputA == true && inputB == true && inputC == true && inputD == true && inputE ==  true && inputF == true && inputG == true
-         && inputH == true && inputI == true) {
+         && inputH == true && inputI == true && inputK == true) {
         confirmSubmit()
     }
     else {
@@ -316,6 +342,8 @@ function handleOnSubmit() {
     firstNameInput();
     lastNameInput();
     idNumber();
+    idNumber();
+    checkDOB();
     phoneNumber();
     addressInput();
     cityInput();

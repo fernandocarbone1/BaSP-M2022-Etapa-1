@@ -51,7 +51,8 @@
                         <label for="IdName">
                             Date of birth:
                         </label>
-                        <input class="input-height" type="date" name="DateOfBirth">
+                        <input id="dateOfBirth" class="input-height" type="date" onfocus="verifyDate()" onblur="checkDOB()">
+                        <p id="errorDate" class="pDate">You must be over 18 years old</p>
                     </div>
                 </div>
                 <div class="pair-input">
