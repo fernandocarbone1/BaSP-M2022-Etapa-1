@@ -177,19 +177,21 @@
                         Get in touch with us
                     </h2>
                     <div class="underline-getin"></div>
-                    <form>
+                    <form id="formContact" action="/my-handling-form-page" onsubmit = handleOnSubmit()>
                         <div class="get-section01">
                             <div class="input-name">
                                 <label for="name">
                                     Full Name:
                                 </label>
-                                <input class="input-height" type="text" value="John Doe" name="user_name">
+                                <input id="fullName" class="input-height" type="text" placeholder="John Doe" onfocus="verifyFullName()" onblur="fullNameInput()">
+                                <p id="errorName" class="pName">Invalid value</p>
                             </div>
                             <div class="input-mail">
                                 <label for="mail">
                                     Email Adress:
                                 </label>
-                                <input class="input-height" id="mail" type="email" name="user_mail">
+                                <input id="email" class="input-height" id="mail" type="email" onfocus="verifyMail()" onblur="eMail()">
+                                <p id="errorMail" class="pMail">Invalid value</p>
                             </div>
                         </div>
                         <div class="get-section02"> 
@@ -230,7 +232,8 @@
                             <label for="msg">
                                 Ask about our system:
                             </label>
-                            <textarea id="msg" name="user-message"></textarea>
+                            <textarea id="msg" name="user-message" onfocus="messageInput()" onblur="eMail()"></textarea>
+                            <p id="errorMsg" class="pMsg">You have to write something</p>
                         </div>
                         <div class="option-button">
                             <div class="check-box">
@@ -329,5 +332,6 @@
                 </div>
             </footer>
         </div>
+        <script src="../javascript/contact.js"></script>
     </body>
 </html>

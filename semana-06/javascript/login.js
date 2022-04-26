@@ -89,7 +89,7 @@ function confirmSubmit(){
 
 function confirm() {
     if (inputA == true && inputB) {
-        alert(confirmSubmit())
+        confirmSubmit()
     } else {
         alert('Please, enter valid values')
     }

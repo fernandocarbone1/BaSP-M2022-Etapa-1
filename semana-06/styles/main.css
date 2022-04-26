@@ -166,6 +166,12 @@ label {
     height: 34px;
 }
 
+/** formular contact **/
+
+.pName, .pMail, .pMsg {
+    display: none;
+}
+
 .underline-story {
     width: 122px;
     height: 3px;
