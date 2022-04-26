@@ -61,7 +61,7 @@ function messageInput() {
     }
 }
 
-// function verify onfocus/onblur
+//  Focus
 
 // Full Name
 function verifyFullName(){
