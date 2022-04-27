@@ -81,6 +81,7 @@ label {
 
 .pMail, .pPassword {
     display: none;
+    color: red;
 }
 
 #errorMail, #errorPassword {

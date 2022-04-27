@@ -108,9 +108,6 @@ function confirm() {
 
 // HandleOnSubmit
 function handleOnSubmit() {
-    fullNameInput();
-    eMail();
-    messageInput();
     confirm();
 }
 

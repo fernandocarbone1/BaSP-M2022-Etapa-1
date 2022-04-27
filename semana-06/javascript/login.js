@@ -88,7 +88,7 @@ function confirmSubmit(){
 }
 
 function confirm() {
-    if (inputA == true && inputB) {
+    if (inputA == true && inputB == true) {
         confirmSubmit()
     } else {
         alert('Please, enter valid values')
@@ -99,7 +99,6 @@ function confirm() {
 // HandleOnSubmit
 
 function handleOnSubmit() {
-    password1();
-    ermail();
+
     confirm();
 }
