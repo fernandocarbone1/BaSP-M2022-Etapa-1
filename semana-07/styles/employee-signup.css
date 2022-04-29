@@ -1,0 +1,174 @@
+.input-form {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    border-radius: 5px;
+    width: 100%;
+}
+
+main {
+    margin: 40px;
+    border: 5px solid black;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+}
+
+label {
+    height: 37px;
+
+}
+
+.input-height {
+    width: 100%;
+    height: 37px;
+}
+
+.pName, .plastName, .pID, .pPhone, .pAddress, .pCity,  .pMail,
+ .pZip, .pPassword, .pPassword2, .pDate {
+    display: none;
+}
+
+.name {
+    height: 37px;
+    width: 95%;
+}
+
+
+.pair-input {
+    padding: 10px;
+}
+
+.confirm-pass {
+    padding: 3%;
+}
+
+.form-submit {
+    padding-left: 3.5%;
+}
+
+@media screen and (min-width: 479px){
+    .pair-input {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .input-form {
+        width: 95%;
+        padding: 2%;
+    }
+
+    .confirm-pass {
+        width: 47%;
+        padding-left: 1.5%;
+    }
+
+}
+
+
+footer {
+    margin: 0 0 0 20px;
+    padding-right: 20px;
+}
+
+.footer-img {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 px;
+}
+
+.address-01 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+
+.location>div:nth-of-type(2) {
+    align-self: center;
+}
+
+.copyright-item {
+    max-width: 250px;
+    text-align: center;
+}
+
+.div-line1 {
+    width: 100%;
+    height: 5px;
+    border-radius: 5px;
+    background-color: #AACE9B;
+    margin-bottom: 20px;
+}
+
+
+@media screen and (max-width: 479px) {
+    .location {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 480px) {
+
+    .footer-img {
+        justify-content: flex-start;
+    }
+
+    .footer-img, .socialmedia-icon {
+        padding-right: 20px;
+    }
+
+    .address-01 {
+        margin: 20px 0 0 0;
+    }
+
+    /* .location {
+        text-align: left;
+    } */
+
+    .address-01 {
+        text-align: left;
+    }
+
+    .location>div:nth-of-type(2) {
+        align-content: left;
+    }
+
+}
+
+@media screen and (min-width: 769px) {
+
+    footer {
+        height: 50px;
+        margin: 20px;
+        padding-left: 20px;
+    }
+    .address {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer-img {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 254px;
+    }
+
+    .address-01 {
+        display: flex;
+        justify-content: end;
+    }
+
+    .copyright-item {
+        max-width: 100%;
+        display: flex;
+        justify-content: end;
+        align-content: flex-end;
+    }
+}

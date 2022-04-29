@@ -1,0 +1,69 @@
+aside {
+        display: none;
+        background-color: #aace9b;
+        width: 164px;
+        height: 900px;
+        padding: 20px;
+        font-size: 12px;
+}
+
+.aside-bar {
+        display: flex;
+        flex-direction: column;  
+}
+
+aside>span {
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 10px;
+}
+
+.span-line {
+    background-color: #373867;
+    width: 45px;
+    height: 3px;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+.span-subline {
+        background-color: #7C9286;
+        width: 100%;
+        height: 1px;
+        margin: 20px 0;
+}
+
+.aside-option01 {
+        margin: 10px 0;
+}
+
+.box-contact {
+        display: flex;
+        margin: 15% 0;
+}
+
+.contact-p {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: space-between;
+        padding-left: 10px;
+}
+
+.street-house {
+        width: 18px;
+        height: 16px;
+}
+
+@media screen and (min-width: 769px) {
+        
+        aside {
+                display: initial;
+                position: fixed;
+                /* width: 15%; */
+        }
+
+        main {
+                margin-left: 200px;
+        }
+}

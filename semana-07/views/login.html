@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' type='text/css' media='screen' href='../styles/reset.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../styles/styles.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../styles/header.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../styles/login.css'>
+    <link rel='html' type='html' media='screen' href='../views/index.html'>
+    <title>Trackgenix SA login</title>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="../views/index.html"><img src="../assets/icons/trackgenix-logo.png" alt="Trackgenix" width="50px"></a>
+            <h1 class="header-title">
+                Trackgenix SA
+            </h1>
+            <img class="sidebar-menu" src="../assets/icons/sidebar-icon.png" alt="sidebar-menu">
+        </div>
+    </header>
+    <main>
+        <h2>Log In</h2>
+        <form id="formLogIn" action="/my-handling-form-page" method="post" onsubmit = handleOnSubmit()>
+            <div class="get-section01">
+                <div class="pair-input">
+                    <div class="input-form">
+                        <label id="mail" for="mail">
+                            Email:
+                        </label>
+                        <input id="email" class="input-height" name="user-mail" type="email" onfocus="verifyMail()" onblur="ermail()">
+                        <p id="errorMail" class="pMail">Invalid email</p>
+                    </div>
+                    <div class="input-form">
+                        <label for="Password">
+                            Password:
+                        </label>
+                        <input id="password" class="input-height" type="password" onfocus="verifyPassword()" onblur="password1()">
+                        <p id="errorPassword" class="pPassword">Invalid password</p>
+                    </div>
+                </div>
+                <div class="form-submit">
+                    <button class="login" id="button">Login</button>
+                </div>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <div class="div-line1"></div>
+        <div class="address">
+            <div class="footer-img">
+                <a class="socialmedia-icon" href="https:/www.linkedin.com">
+                    <img src="../assets/icons/linkedin-logo.png" alt="LinkedIn" width="30px"></a>
+                <a class="socialmedia-icon" href="https:/www.twitter.com">
+                    <img src="../assets/icons/twitter-logo.png" alt="Twitter" width="30px"></a>
+                <a class="socialmedia-icon" href="https:/www.facebook.com">
+                    <img src="../assets/icons/fb-logo.png" alt="Facebook" width="20px"></a>
+                <a class="socialmedia-icon" href="https:/www.instagram.com">
+                    <img src="../assets/icons/instagram-logo.png" alt="Instagram" width="30px"></a>
+                <a class="socialmedia-icon" href="https:/www.github.com">
+                    <img src="../assets/icons/github-logo.png" alt="GitHub" width="30px">
+                </a>
+            </div>
+            <div class="location">
+                <div>
+                    <p class="address-01">Rosario, Argentina</p>
+                </div>
+                <div class="copyright-item">
+                    <p class="address-01">Copyright © 2022 Radium Rocket. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../javascript/login.js"></script>
+</body>
+</html>

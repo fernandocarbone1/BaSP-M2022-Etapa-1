@@ -28,4 +28,8 @@ https://fernandocarbone1.github.io/BaSP-M2022-Etapa-1/semana-05/index.html
 The link from the sixth week (DOM JavaScript):
 https://fernandocarbone1.github.io/BaSP-M2022-Etapa-1/semana-06/views/index.html
 
+### Week 07
+Here below, the link from the seventh week (API fetch):
+https://fernandocarbone1.github.io/BaSP-M2022-Etapa-1/semana-07/views/index.html
+
 _By Fernando Carboné_
