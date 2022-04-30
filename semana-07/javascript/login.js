@@ -40,6 +40,7 @@ function password1() {
             number++;
         }
     }
+    console.log(password)
     if (password.length - 1 > 8) {
         document.getElementById('password').style.border = "3px solid green";
         inputB = true
@@ -91,13 +92,16 @@ function confirmSubmit(){
 function confirm() {
     if (inputA == true && inputB == true) {
         confirmSubmit()
-        console.log(listKey)
-        loginFetch();
-        
+        var url = 'https://basp-m2022-api-rest-server.herokuapp.com/login'
+        var listKey = ['email', 'password']
+        var listValue = [emailPrint.value, password.value]
+        loginFetch(url, listKey, listValue);
     } else {
         alert('Please, enter valid values')
     }
 }
+
+
 
 
 // HandleOnSubmit
@@ -127,14 +131,14 @@ function joinParams(listKey, listValue) {
     var myArr = [];
 
     for (var x = 0; x < listKey.length; x++) {
-        myArr.push(listKey[x].concat("= ", listValue[x]));
+        myArr.push(listKey[x].concat("=", listValue[x]));
     }
     console.log('myArr: ', myArr)
     return myArr.join('&');
 }
 
 console.log(listKey)
-joinParams (['Email', 'Password'],['rose@radiumrocket.com', 'BaSP2022']);
+// joinParams (['Email', 'Password'],['rose@radiumrocket.com', 'BaSP2022']);
 
 // Function Fetch
 
@@ -144,9 +148,8 @@ function loginFetch(url, listKey, listValue) {
 
     var fetchURL = url.concat('?', queryParams);
     console.log('My fetch url: ', fetchURL);
-    body: new FormData(e.target);
 
-    fetch('https://basp-m2022-api-rest-server.herokuapp.com/login?email=rose@radiumrocket.com&password=BaSP2022')
+    fetch(fetchURL)
     .then(function(response){
         return response.json()
     })
@@ -155,5 +158,5 @@ function loginFetch(url, listKey, listValue) {
     })
     .catch(function(error){
         console.log(error)
-    });
+    })
 }
