@@ -325,11 +325,52 @@ function confirmSubmit() {
             "\nYour confirm password is: " + confirmPasswordPrint.value
         )
     }
-
 function confirm() {
     if (inputA == true && inputB == true && inputC == true && inputD == true && inputE ==  true && inputF == true && inputG == true
          && inputH == true && inputI == true && inputK == true) {
         confirmSubmit()
+
+        // // variables input
+
+        // var firstNamePrint = document.getElementById('name')
+        // var lastNamePrint = document.getElementById('lastName')
+        // var iDNumberPrint = document.getElementById('identNumber')
+        // var dobBirthPrint = document.getElementById('dateOfBirth')
+        // var phonePrint = document.getElementById('phone')
+        // var addressPrint = document.getElementById('address')
+        // var cityPrint = document.getElementById('cityName')
+        // var zipPrint = document.getElementById('zipCode');
+        // var emailPrint = document.getElementById('email');
+        // var passwordPrint = document.getElementById('password');
+        // var confirmPasswordPrint = document.getElementById('confirmPassword');
+
+        // datebirth
+
+        var dob = new Date(document.getElementById("dateOfBirth").value)
+        
+        var year = dob.getFullYear()
+        var day = dob.getDate()
+        var month = dob.getMonth()
+        function dateDay(){
+            if (day < 10){
+                return '0' + day
+            }
+        }
+        function dateMonth(){
+            if (month < 10){
+                return '0' + month
+            }
+        }
+        var dateBirth = dateMonth() + dateDay() + year
+
+        var url = 'https://basp-m2022-api-rest-server.herokuapp.com/signup'
+        var listKey = ['name', 'lastName', 'dni', 'dob', 'phone', 'address', 'city', 'zip', 
+                    'email', 'password', 'confirmPassword']
+        var listValue = [firstNamePrint.value, lastNamePrint.value, iDNumberPrint.value, dateBirth,
+            phonePrint.value, addressPrint.value, cityPrint.value, zipPrint.value, emailPrint.value, passwordPrint.value,
+            confirmPasswordPrint.value]
+
+        loginFetch(url, listKey, listValue);
     }
     else {
         alert('Please, enter valid values')
@@ -339,17 +380,90 @@ function confirm() {
 
 // HandleOnSubmit
 function handleOnSubmit() {
-    firstNameInput();
-    lastNameInput();
-    idNumber();
-    idNumber();
-    checkDOB();
-    phoneNumber();
-    addressInput();
-    cityInput();
-    zipCodeCity();
-    eMail();
-    password1();
-    confirmPassword2();
     confirm();
 }
+
+// Functions for query & fetch
+
+// Function Join
+
+listKey = []
+listValue = []
+
+function joinParams(listKey, listValue) {
+    var myArr = [];
+
+    for (var x = 0; x < listKey.length; x++) {
+        myArr.push(listKey[x].concat("=", listValue[x]));
+    }
+    console.log('myArr: ', myArr)
+    return myArr.join('&');
+}
+
+// Function Fetch
+
+function loginFetch(url, listKey, listValue) {
+    var queryParams = joinParams(listKey, listValue);
+    var fetchUrl = url.concat("?", queryParams)
+
+    fetch(fetchUrl)
+        .then(function(response) {
+            response.json().then(function(result) {
+                console.log('result', result);
+                alert(result.msg)
+            })
+
+        })
+        .catch(function(error) {
+            console.log(error())
+        })
+}
+
+/*
+{
+    "success": false,
+    "errors": [
+        {
+            "msg": "DNI must have only numbers",
+            "param": "dni",
+            "location": "query"
+        },
+        {
+            "msg": "DNI must have between 7 and 8 numbers",
+            "param": "dni",
+            "location": "query"
+        },
+        {
+            "msg": "Date of birth must have format MM/DD/YYYY",
+            "param": "dob",
+            "location": "query"
+        },
+        {
+            "msg": "Date of birth must be before today",
+            "param": "dob",
+            "location": "query"
+        },
+        {
+            "msg": "City must have string",
+            "param": "city",
+            "location": "query"
+        },
+        {
+            "msg": "City must have more than 3 letters",
+            "param": "city",
+            "location": "query"
+        },
+        {
+            "msg": "Zip must have only numbers",
+            "param": "zip",
+            "location": "query"
+        },
+        {
+            "msg": "Zip must have between 4 and 5 numbers",
+            "param": "zip",
+            "location": "query"
+        }
+    ]
+}
+
+*/

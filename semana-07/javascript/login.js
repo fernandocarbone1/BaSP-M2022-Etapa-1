@@ -4,12 +4,10 @@ window.onload = function() {
 })}
 
 // boolean variables
-
 var inputA
 var inputB
 
 // verify mail:
-
 function ermail(){
     var email = document.getElementById('email').value;
     var validateEmail = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
@@ -26,7 +24,6 @@ function ermail(){
 }
 
 // verify password:
-
 function password1() {
     var alpha = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "ñ", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
     var password = document.getElementById('password').value;
@@ -41,7 +38,7 @@ function password1() {
         }
     }
     console.log(password)
-    if (password.length - 1 > 8) {
+    if (password.length - 1 >= 8) {
         document.getElementById('password').style.border = "3px solid green";
         inputB = true
     } else {
@@ -58,13 +55,10 @@ function password1() {
     } else {
         document.getElementById('password').style.border = "3px solid green";
         inputB = true
-
     }
 }
 
 // Focus:
-
-
 function verifyMail(){
     document.getElementById('email').style.border = '3px solid blue'
     document.getElementById('errorMail').classList.add('pMail')
@@ -76,13 +70,10 @@ function verifyPassword(){
 }
 
 // variables input
-
 var emailPrint = document.getElementById('email');
 var passwordPrint = document.getElementById('password');
 
-
 // window.alert()
-
 function confirmSubmit(){
     alert(
         "Your email is: " + emailPrint.value + 
@@ -91,7 +82,6 @@ function confirmSubmit(){
 
 function confirm() {
     if (inputA == true && inputB == true) {
-        confirmSubmit()
         var url = 'https://basp-m2022-api-rest-server.herokuapp.com/login'
         var listKey = ['email', 'password']
         var listValue = [emailPrint.value, password.value]
@@ -101,28 +91,10 @@ function confirm() {
     }
 }
 
-
-
-
 // HandleOnSubmit
-
 function handleOnSubmit() {
     confirm();
 }
-
-
-// Functions for query & fetch
-
-// {
-//     email: email.value,
-//     password: password.value
-
-// }
-
-// email=rose@radiumrocket.com&password=BaSP2022
-
-
-// Function Join
 
 listKey = []
 listValue = []
@@ -137,26 +109,36 @@ function joinParams(listKey, listValue) {
     return myArr.join('&');
 }
 
-console.log(listKey)
-// joinParams (['Email', 'Password'],['rose@radiumrocket.com', 'BaSP2022']);
-
 // Function Fetch
-
 function loginFetch(url, listKey, listValue) {
     var queryParams = joinParams(listKey, listValue);
-    console.log('queryParams: ', queryParams)
+    var fetchUrl = url.concat("?", queryParams)
 
-    var fetchURL = url.concat('?', queryParams);
-    console.log('My fetch url: ', fetchURL);
+    fetch(fetchUrl)
+        .then(function(response) {
+            response.json().then(function(result) {
+                console.log('result', result);
+                alert(result.msg)
+                confirmSubmit()
+            })
 
-    fetch(fetchURL)
-    .then(function(response){
-        return response.json()
-    })
-    .then(function(jsonResponse){
-        console.log(jsonResponse);
-    })
-    .catch(function(error){
-        console.log(error)
-    })
+        })
+        .catch(function(error) {
+            console.log(error())
+        })
 }
+
+
+// event.preventDefault();
+//     let form = new FormData(document.getElementById('formLogIn'));
+//     const queryString = new URLSearchParams(form).toString();
+//     const options = {
+//         method: 'GET',
+//     };
+//     let url = 'https://basp-m2022-api-rest-server.herokuapp.com/login?' + queryString;
+    
+//     fetch(url, options)
+//         .then( response => {response.json()
+//             console.log(response);
+//     }
+// )
