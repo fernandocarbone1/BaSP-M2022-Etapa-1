@@ -1,8 +1,3 @@
-window.onload = function() {
-    document.getElementById("formSignUp").addEventListener('submit', function(event) {
-        event.preventDefault()
-    })
-}
 // boolean variables
 var inputA = false
 var inputB = false
@@ -75,7 +70,6 @@ function idNumber() {
 }
 function checkDOB() {
     var dob = document.getElementById("dateOfBirth").value
-    console.log("dob", typeof dob)
     var dateDOB = new Date(dob).getTime();
     // Date >= 18 yo
     var diff = new Date().getTime() - dateDOB;
@@ -287,20 +281,17 @@ function confirm() {
     if (inputA == true && inputB == true && inputC == true && inputD == true && inputE ==  true && inputF == true && inputG == true
          && inputH == true && inputI == true && inputK == true) {
         confirmSubmit()
-
         var date = dobBirthPrint.value
         var year = date.substring(0,4)
         var months = date.substring(5,7)
         var day = date.substring(8,10)
         var inputsDate = months + '/' + day + '/' + year
-
         var url = 'https://basp-m2022-api-rest-server.herokuapp.com/signup'
         var listKey = ['name', 'lastName', 'dni', 'dob', 'phone', 'address', 'city', 'zip', 
                     'email', 'password', 'confirmPassword']
         var listValue = [firstNamePrint.value, lastNamePrint.value, iDNumberPrint.value, inputsDate,
             phonePrint.value, addressPrint.value, cityPrint.value, zipPrint.value, emailPrint.value, passwordPrint.value,
             confirmPasswordPrint.value]
-        console.log('Fecha funciona')
         loginFetch(url, listKey, listValue);
     }
     else {
@@ -338,35 +329,56 @@ function loginFetch(url, listKey, listValue) {
             console.log(error())
         })
 }
-// Functions from LocalStorage
-function storage(){
-    localStorage.setItem('firstName', firstNamePrint.value)
-    localStorage.setItem('lastName', lastNamePrint.value)
-    localStorage.setItem('identNumber', iDNumberPrint.value)
-    localStorage.setItem('dateOfBirth', dobBirthPrint.value)
-    localStorage.setItem('phoneNumber', phonePrint.value)
-    localStorage.setItem('address', addressPrint.value)
-    localStorage.setItem('city', cityPrint.value)
-    localStorage.setItem('zipCode', zipPrint.value);
-    localStorage.setItem('email', emailPrint.value);
-    localStorage.setItem('password', passwordPrint.value);
-    localStorage.setItem('confirmPassword', confirmPasswordPrint.value)
+
+function loginFetch(url, listKey, listValue) {
+    var queryParams = joinParams(listKey, listValue);
+    var fetchUrl = url.concat("?", queryParams)
+
+    fetch(fetchUrl)
+        .then(function(response) {
+            return response.json()
+        })
+        .then(function(jsonResponse){
+            console.log(jsonResponse.success)
+            if(jsonResponse.success){
+                localStorage.setItem('id', jsonResponse.data.id)
+                localStorage.setItem('firstName', firstNamePrint.value)
+                localStorage.setItem('lastName', lastNamePrint.value)
+                localStorage.setItem('identNumber', iDNumberPrint.value)
+                localStorage.setItem('dateOfBirth', dobBirthPrint.value)
+                localStorage.setItem('phoneNumber', phonePrint.value)
+                localStorage.setItem('address', addressPrint.value)
+                localStorage.setItem('city', cityPrint.value)
+                localStorage.setItem('zip', zipPrint.value)
+                localStorage.setItem('email',emailPrint.value);
+                localStorage.setItem('password', passwordPrint.value);
+                localStorage.setItem('confirmPassword', confirmPasswordPrint.value)
+                alert(jsonResponse.msg + "Succesfully created");
+            }
+            else {
+                alert("Error", jsonResponse.msg)
+            }
+        })
+        .catch(function(error) {
+            console.log(error)
+        })
 }
-
-// if(localStorage.getItem('user') !=null) {
-//     firstNamePrint.value = localStorage.getItem('firstName')
-//     lastNamePrint.value = localStorage.getItem('lastName')
-//     iDNumberPrint.value = localStorage.getItem ('identNumber')
-//     dobBirthPrint.value = localStorage.getItem ('dateOfBirth')
-//     phonePrint.value = localStorage.getItem ('phoneNumber')
-//     addressPrint.value = localStorage.getItem ('address')
-//     cityPrint.value = localStorage.getItem ('city')
-//     zipPrint.value = localStorage.getItem ('zipCpode')
-//     emailPrint.value = localStorage.getItem ('email')
-//     passwordPrint.value = localStorage.getItem ('password')
-//     confirmPasswordPrint.value = localStorage.getItem ('confirmPassword')
-// }
-
-function getLocalStorage(){
-
+// Windows.load
+window.onload = function() {
+    document.getElementById("formSignUp").addEventListener('submit', function(event) {
+        event.preventDefault()
+    })
+    if (localStorage.getItem('id') != null) {
+        firstNamePrint.value = localStorage.getItem('firstName')
+        lastNamePrint.value = localStorage.getItem('lastName')
+        iDNumberPrint.value = localStorage.getItem("identNumber");
+        dobBirthPrint.value = localStorage.getItem("dateOfBirth");
+        phonePrint.value = localStorage.getItem("phoneNumber");
+        addressPrint.value = localStorage.getItem("address");
+        cityPrint.value = localStorage.getItem("city");
+        zipPrint.value = localStorage.getItem("zip");
+        emailPrint.value = localStorage.getItem("email");
+        passwordPrint.value = localStorage.getItem("password");
+        confirmPasswordPrint.value = localStorage.getItem("confirmPassword");
+    }
 }
