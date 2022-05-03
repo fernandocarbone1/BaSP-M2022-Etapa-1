@@ -28,14 +28,14 @@
                         <label for="firstName">
                             First name:
                         </label>
-                        <input id="name" class="input-height" type="text" placeholder="John" onfocus="verifyFirstName()" onblur="firstNameInput()">
+                        <input id="name" class="input-height" type="text" placeholder="It must contain at least three letters" onfocus="verifyFirstName()" onblur="firstNameInput()">
                         <p id="errorName" class="pName">Invalid value</p>
                     </div>
                     <div class="input-form">
                         <label for="lastName">
                             Last name:
                         </label>
-                        <input id="lastName" class="input-height" type="text" placeholder="Doe" onfocus="verifyLastName()" onblur="lastNameInput()">
+                        <input id="lastName" class="input-height" type="text" placeholder="It must contain at least three letters" onfocus="verifyLastName()" onblur="lastNameInput()">
                         <p id="errorlastMessage" class="plastName">Invalid value</p>
                     </div>
                 </div>
@@ -44,7 +44,7 @@
                         <label for="IdName">
                             Id number:
                         </label>
-                        <input id="identNumber" class="input-height" type="number" onfocus="verifyIDNumber()" onblur="idNumber()">
+                        <input id="identNumber" class="input-height" type="number" placeholder="It must be an eight-numbers ID" onfocus="verifyIDNumber()" onblur="idNumber()">
                         <p id="errorID" class="pID">Invalid value</p>
                     </div>
                     <div class="input-form">
@@ -60,14 +60,14 @@
                         <label for="TelephoneNumber">
                             Telephone number:
                         </label>
-                        <input id="phone" class="input-height" type="number" onfocus="verifyPhone()" onblur="phoneNumber()">
+                        <input id="phone" class="input-height" type="number" placeholder="It must contain ten numbers" onfocus="verifyPhone()" onblur="phoneNumber()">
                         <p id="errorPhone" class="pPhone">Invalid value</p>
                     </div>
                     <div class="input-form">
                         <label for="Address">
                             Address:
                         </label>
-                        <input id="address" class="input-height" type="text" onfocus="verifyAddress()" onblur="addressInput()">
+                        <input id="address" class="input-height" type="text" placeholder="It must be a valid address, with letters & numbers" onfocus="verifyAddress()" onblur="addressInput()">
                         <p id="errorAddress" class="pAddress">Invalid value</p>
                     </div>
                 </div>
@@ -76,14 +76,14 @@
                         <label for="City">
                             City:
                         </label>
-                        <input id="cityName" class="input-height" type="text" onfocus="verifyCity()" onblur="cityInput()">
+                        <input id="cityName" class="input-height" type="text" placeholder="It must contain at least three letters" onfocus="verifyCity()" onblur="cityInput()">
                         <p id="errorCity" class="pCity">Invalid value</p>
                     </div>
                     <div class="input-form">
                         <label for="ZipCode">
                             Zip Code:
                         </label>
-                        <input id="zipCode" class="input-height" type="number" onfocus="verifyZip()" onblur="zipCodeCity()">
+                        <input id="zipCode" class="input-height" type="number" placeholder="It must contain four or five numbers" onfocus="verifyZip()" onblur="zipCodeCity()">
                         <p id="errorZip" class="pZip">Invalid value</p>
                     </div>
                 </div>
@@ -92,15 +92,15 @@
                         <label for="Email">
                             Email:
                         </label>
-                        <input id="email" class="input-height" type="email" onfocus="verifyMail()" onblur="eMail()">
+                        <input id="email" class="input-height" type="email" placeholder="It must be a valid e-mail" onfocus="verifyMail()" onblur="eMail()">
                         <p id="errorMail" class="pMail">Invalid value</p>
                     </div>
                     <div class="input-form">
                         <label for="Password">
                             Password:
                         </label>
-                        <input id="password" class="input-height" type="password" onfocus="verifyPassword()" onblur="password1()">
-                        <p id="errorPassword" class="pPassword">Invalid value</p>
+                        <input id="password" class="input-height" type="password" placeholder="It must contain letters and numbers" onfocus="verifyPassword()" onblur="password1()">
+                        <p id="errorPassword" class="pPassword"></p>
                     </div>
                 </div>
                     <div class="input-form">
@@ -108,8 +108,8 @@
                         <label for="Password">
                             Confirm password:
                         </label>
-                        <input id="confirmPassword" class="input-height" type="password" onfocus="verifyConfirm()" onblur="confirmPassword2()">
-                        <p id="errorPassword2" class="pPassword2">Invalid value</p>
+                        <input id="confirmPassword" class="input-height" type="password" placeholder="It must match with the password" onfocus="verifyConfirm()" onblur="confirmPassword2()">
+                        <p id="errorPassword2" class="pPassword2">It doesn't match with the password</p>
                         </div>
                     </div>
                 </div>

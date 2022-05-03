@@ -3,23 +3,19 @@ window.onload = function() {
         event.preventDefault()
     })
 }
-
 // boolean variables
-
-var inputA
-var inputB
-var inputC
-var inputD
-var inputE
-var inputF
-var inputG
-var inputH
-var inputI
-var inputJ
-var inputK
-
-
-
+var inputA = false
+var inputB = false
+var inputC = false
+var inputD = false
+var inputE = false
+var inputF = false
+var inputG = false
+var inputH = false
+var inputI = false
+var inputJ = false
+var inputK = false
+//Conditions for validations
 function firstNameInput(){
     var alpha = [" ", "a", "b", "c", "d", "e", "f", "g", "h", "j", "k", 
     "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "x", "y", "z"]
@@ -31,18 +27,15 @@ function firstNameInput(){
             inputA = false
         }
     }
-
     if (name.length < 3) {
         document.getElementById('name').style.border = "3px solid red";
         document.getElementById('errorName').classList.remove("pName");
         inputA = false
-
     } else {
         document.getElementById('name').style.border = "3px solid green";
         inputA = true
     }
 }
-
 function lastNameInput(){
     var alpha = [" ", "a", "b", "c", "d", "e", "f", "g", "h", "j", "k", 
     "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "x", "y", "z"]
@@ -54,25 +47,21 @@ function lastNameInput(){
             inputB = false
         }
     }
-
     if (name.length < 3) {
         document.getElementById('lastName').style.border = "3px solid red";
         document.getElementById('errorlastMessage').classList.remove("plastName");
         inputB = false
-
     } else {
         document.getElementById('lastName').style.border = "3px solid green";
         inputB = true
     }
 }
-
 function idNumber() {
     var id = document.getElementById('identNumber').value
     if (id.length > 6) {
         if (id.length <= 8) {
             document.getElementById('identNumber').style.border = '3px solid green';
             inputC = true
-
         } else {
             document.getElementById('identNumber').style.border = '3px solid red';
             document.getElementById('errorID').classList.remove('pID')
@@ -84,16 +73,13 @@ function idNumber() {
         inputC = false
     }
 }
-
 function checkDOB() {
     var dob = document.getElementById("dateOfBirth").value
     console.log("dob", typeof dob)
     var dateDOB = new Date(dob).getTime();
-
+    // Date >= 18 yo
     var diff = new Date().getTime() - dateDOB;
-
     console.log(Math.trunc(diff / (1000 * 60 * 60 * 24 * 365.25)));
-
     age = Math.trunc(diff / (1000 * 60 * 60 * 24 * 365.25));
     if (age >= 18) {
         document.getElementById('dateOfBirth').style.border = '3px solid green';
@@ -104,9 +90,7 @@ function checkDOB() {
         inputK = true
         alert('At least your age must be 18 years old')
     }
-
 }
-
 function phoneNumber() {
     var phone = document.getElementById("phone").value;
     if (phone.length < 10 || phone.length > 10) {
@@ -118,7 +102,6 @@ function phoneNumber() {
         inputD = true
     }
 }
-
 function addressInput() {
     var address = document.getElementById("address").value
     if (address.indexOf(" ") > -1 && address.indexOf(" ") < address.length - 2) {
@@ -130,14 +113,12 @@ function addressInput() {
             document.getElementById('errorAddress').classList.remove('pAddress');
             inputE = false
         }
-
     } else {
         document.getElementById("address").style.border = '3px solid red';
         document.getElementById('errorAddress').classList.remove('pAddress');
         inputE = false
     }
 }
-
 function cityInput() {
     var city = document.getElementById('cityName').value;
     if (city.length < 3) {
@@ -149,7 +130,6 @@ function cityInput() {
         inputF = true
     }
 }
-
 function zipCodeCity() {
     var zipCode = document.getElementById('zipCode').value;
     if (zipCode.length < 4  || zipCode.length > 5) {
@@ -162,7 +142,6 @@ function zipCodeCity() {
         inputG = true
     }
 }
-
 function eMail(){
     var email = document.getElementById('email').value;
     var validateEmail = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
@@ -176,7 +155,6 @@ function eMail(){
         inputH = true
     }
 }
-
 function password1() {
     var alpha = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "ñ", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
     var password = document.getElementById('password').value;
@@ -208,7 +186,6 @@ function password1() {
         inputI = true
     }
 }
-
 function confirmPassword2() {
     var pass = document.getElementById("password").value;
     var pass2 = document.getElementById("confirmPassword").value;
@@ -220,81 +197,64 @@ function confirmPassword2() {
         inputJ = false
     }
 }
-
 // Focus:
-
 // First Name
 function verifyFirstName(){
     document.getElementById('name').style.border = '3px solid blue'
     document.getElementById('errorName').classList.add('pName')
 }
-
 // Last Name
 function verifyLastName(){
     document.getElementById('lastName').style.border = '3px solid blue'
     document.getElementById('errorlastMessage').classList.add('plastName')
 }
-
 // Id Number
 function verifyIDNumber(){
     document.getElementById('identNumber').style.border = '3px solid blue'
     document.getElementById('errorID').classList.add('pID')
 }
-
 // dateOfBirth
 function verifyDate() {
     document.getElementById('dateOfBirth').style.border = '3px solid blue'
     document.getElementById('errorDate').classList.add('pDate')
 }
-
-
 // PhoneNumber
 function verifyPhone(){
     document.getElementById('phone').style.border = '3px solid blue'
     document.getElementById('errorPhone').classList.add('pPhone')
 }
-
 // Address
 function verifyAddress(){
     document.getElementById('address').style.border = '3px solid blue'
     document.getElementById('errorAddress').classList.add('pAddress')
 }
-
 // City
 function verifyCity(){
     document.getElementById('cityName').style.border = '3px solid blue'
     document.getElementById('errorCity').classList.add('pCity')
 }
-
 // ZipCode
 function verifyZip(){
     document.getElementById('zipCode').style.border = '3px solid blue'
     document.getElementById('errorZip').classList.add('pZip')
 }
-
-
 // Email
 function verifyMail(){
     document.getElementById('email').style.border = '3px solid blue'
     document.getElementById('errorMail').classList.add('pMail')
 }
-
-
 // Password_01
 function verifyPassword(){
     document.getElementById('password').style.border = '3px solid blue'
     document.getElementById('errorPassword').classList.add('pPassword')
 }
-
 // Password_02
 function verifyConfirm(){
     document.getElementById('confirmPassword').style.border = '3px solid blue'
     document.getElementById('errorPassword2').classList.add('pPassword2')
 }
 
-
 // variables input
-
 var firstNamePrint = document.getElementById('name')
 var lastNamePrint = document.getElementById('lastName')
 var iDNumberPrint = document.getElementById('identNumber')
@@ -307,9 +267,7 @@ var emailPrint = document.getElementById('email');
 var passwordPrint = document.getElementById('password');
 var confirmPasswordPrint = document.getElementById('confirmPassword');
 
-
 // window.alert()
-
 function confirmSubmit() {
     alert(
             "Your first name is: " + firstNamePrint.value +
@@ -330,78 +288,41 @@ function confirm() {
          && inputH == true && inputI == true && inputK == true) {
         confirmSubmit()
 
-        // // variables input
-
-        // var firstNamePrint = document.getElementById('name')
-        // var lastNamePrint = document.getElementById('lastName')
-        // var iDNumberPrint = document.getElementById('identNumber')
-        // var dobBirthPrint = document.getElementById('dateOfBirth')
-        // var phonePrint = document.getElementById('phone')
-        // var addressPrint = document.getElementById('address')
-        // var cityPrint = document.getElementById('cityName')
-        // var zipPrint = document.getElementById('zipCode');
-        // var emailPrint = document.getElementById('email');
-        // var passwordPrint = document.getElementById('password');
-        // var confirmPasswordPrint = document.getElementById('confirmPassword');
-
-        // datebirth
-
-        var dob = new Date(document.getElementById("dateOfBirth").value)
-        
-        var year = dob.getFullYear()
-        var day = dob.getDate()
-        var month = dob.getMonth()
-        function dateDay(){
-            if (day < 10){
-                return '0' + day
-            }
-        }
-        function dateMonth(){
-            if (month < 10){
-                return '0' + month
-            }
-        }
-        var dateBirth = dateMonth() + dateDay() + year
+        var date = dobBirthPrint.value
+        var year = date.substring(0,4)
+        var months = date.substring(5,7)
+        var day = date.substring(8,10)
+        var inputsDate = months + '/' + day + '/' + year
 
         var url = 'https://basp-m2022-api-rest-server.herokuapp.com/signup'
         var listKey = ['name', 'lastName', 'dni', 'dob', 'phone', 'address', 'city', 'zip', 
                     'email', 'password', 'confirmPassword']
-        var listValue = [firstNamePrint.value, lastNamePrint.value, iDNumberPrint.value, dateBirth,
+        var listValue = [firstNamePrint.value, lastNamePrint.value, iDNumberPrint.value, inputsDate,
             phonePrint.value, addressPrint.value, cityPrint.value, zipPrint.value, emailPrint.value, passwordPrint.value,
             confirmPasswordPrint.value]
-
+        console.log('Fecha funciona')
         loginFetch(url, listKey, listValue);
     }
     else {
         alert('Please, enter valid values')
     }
 }
-
-
 // HandleOnSubmit
 function handleOnSubmit() {
     confirm();
 }
-
-// Functions for query & fetch
-
-// Function Join
-
+// Functions for query, join & fetch
 listKey = []
 listValue = []
-
 function joinParams(listKey, listValue) {
     var myArr = [];
-
     for (var x = 0; x < listKey.length; x++) {
         myArr.push(listKey[x].concat("=", listValue[x]));
     }
     console.log('myArr: ', myArr)
     return myArr.join('&');
 }
-
 // Function Fetch
-
 function loginFetch(url, listKey, listValue) {
     var queryParams = joinParams(listKey, listValue);
     var fetchUrl = url.concat("?", queryParams)
@@ -412,58 +333,40 @@ function loginFetch(url, listKey, listValue) {
                 console.log('result', result);
                 alert(result.msg)
             })
-
         })
         .catch(function(error) {
             console.log(error())
         })
 }
-
-/*
-{
-    "success": false,
-    "errors": [
-        {
-            "msg": "DNI must have only numbers",
-            "param": "dni",
-            "location": "query"
-        },
-        {
-            "msg": "DNI must have between 7 and 8 numbers",
-            "param": "dni",
-            "location": "query"
-        },
-        {
-            "msg": "Date of birth must have format MM/DD/YYYY",
-            "param": "dob",
-            "location": "query"
-        },
-        {
-            "msg": "Date of birth must be before today",
-            "param": "dob",
-            "location": "query"
-        },
-        {
-            "msg": "City must have string",
-            "param": "city",
-            "location": "query"
-        },
-        {
-            "msg": "City must have more than 3 letters",
-            "param": "city",
-            "location": "query"
-        },
-        {
-            "msg": "Zip must have only numbers",
-            "param": "zip",
-            "location": "query"
-        },
-        {
-            "msg": "Zip must have between 4 and 5 numbers",
-            "param": "zip",
-            "location": "query"
-        }
-    ]
+// Functions from LocalStorage
+function storage(){
+    localStorage.setItem('firstName', firstNamePrint.value)
+    localStorage.setItem('lastName', lastNamePrint.value)
+    localStorage.setItem('identNumber', iDNumberPrint.value)
+    localStorage.setItem('dateOfBirth', dobBirthPrint.value)
+    localStorage.setItem('phoneNumber', phonePrint.value)
+    localStorage.setItem('address', addressPrint.value)
+    localStorage.setItem('city', cityPrint.value)
+    localStorage.setItem('zipCode', zipPrint.value);
+    localStorage.setItem('email', emailPrint.value);
+    localStorage.setItem('password', passwordPrint.value);
+    localStorage.setItem('confirmPassword', confirmPasswordPrint.value)
 }
 
-*/
+// if(localStorage.getItem('user') !=null) {
+//     firstNamePrint.value = localStorage.getItem('firstName')
+//     lastNamePrint.value = localStorage.getItem('lastName')
+//     iDNumberPrint.value = localStorage.getItem ('identNumber')
+//     dobBirthPrint.value = localStorage.getItem ('dateOfBirth')
+//     phonePrint.value = localStorage.getItem ('phoneNumber')
+//     addressPrint.value = localStorage.getItem ('address')
+//     cityPrint.value = localStorage.getItem ('city')
+//     zipPrint.value = localStorage.getItem ('zipCpode')
+//     emailPrint.value = localStorage.getItem ('email')
+//     passwordPrint.value = localStorage.getItem ('password')
+//     confirmPasswordPrint.value = localStorage.getItem ('confirmPassword')
+// }
+
+function getLocalStorage(){
+
+}
