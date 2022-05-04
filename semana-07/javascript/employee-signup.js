@@ -263,19 +263,19 @@ var confirmPasswordPrint = document.getElementById('confirmPassword');
 
 // window.alert()
 function confirmSubmit() {
-    alert(
-            "Your first name is: " + firstNamePrint.value +
-            "\nYour last name is: " + lastNamePrint.value +
-            "\nYour ID Number is: " + iDNumberPrint.value +
-            "\nYour age is: " + dobBirthPrint.value +
-            "\nYour phone number is: " + phonePrint.value +
-            "\nYour address is: " + addressPrint.value +
-            "\nYour city is: " + cityPrint.value +
-            "\nYour zip code is: " + zipPrint.value +
-            "\nYour email is: " + emailPrint.value +
-            "\nYour password is: " + passwordPrint.value +
-            "\nYour confirm password is: " + confirmPasswordPrint.value
-        )
+    // alert(
+    //         "Your first name is: " + firstNamePrint.value +
+    //         "\nYour last name is: " + lastNamePrint.value +
+    //         "\nYour ID Number is: " + iDNumberPrint.value +
+    //         "\nYour age is: " + dobBirthPrint.value +
+    //         "\nYour phone number is: " + phonePrint.value +
+    //         "\nYour address is: " + addressPrint.value +
+    //         "\nYour city is: " + cityPrint.value +
+    //         "\nYour zip code is: " + zipPrint.value +
+    //         "\nYour email is: " + emailPrint.value +
+    //         "\nYour password is: " + passwordPrint.value +
+    //         "\nYour confirm password is: " + confirmPasswordPrint.value
+    //     )
     var modal = document.getElementById('modal').classList.remove('modal-content')
     document.getElementById('firstNameModal').innerText = 'Your first name is: ' +  firstNamePrint.value
     document.getElementById('lastNameModal').innerText = 'Your last name is: ' +  lastNamePrint.value
