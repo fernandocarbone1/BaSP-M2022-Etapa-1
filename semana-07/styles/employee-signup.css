@@ -70,7 +70,7 @@ label {
 
 /* Modal response*/
 .modal-header {
-    padding: 2px 16px;
+  padding: 2px 16px;
     background-color: rgb(170, 206, 155);
     color: white;
 }
@@ -114,7 +114,7 @@ label {
 }
 .modal-content {
     display: none;
-}
+}  
 
 footer {
     margin: 0 0 0 20px;

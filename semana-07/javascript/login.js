@@ -77,7 +77,11 @@ var passwordPrint = document.getElementById('password');
 function confirmSubmit(){
     alert(
         "Your email is: " + emailPrint.value + 
-        "\nYour password is: " + password.value);  
+        "\nYour password is: " + password.value);
+    var modal = document.getElementById('modal').classList.remove('modal-content')
+    document.getElementById('mailModal').innerText = 'Your e-mail is: ' +  emailPrint.value
+    document.getElementById('passwordModal').innerText = 'Your password is: ' +  passwordPrint.value
+
 }
 
 function confirm() {
