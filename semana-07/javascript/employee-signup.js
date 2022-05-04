@@ -276,6 +276,18 @@ function confirmSubmit() {
             "\nYour password is: " + passwordPrint.value +
             "\nYour confirm password is: " + confirmPasswordPrint.value
         )
+    var modal = document.getElementById('modal').classList.remove('modal-content')
+    document.getElementById('firstNameModal').innerText = 'Your first name is: ' +  firstNamePrint.value
+    document.getElementById('lastNameModal').innerText = 'Your last name is: ' +  lastNamePrint.value
+    document.getElementById('idNumberModal').innerText = 'Your ID Number is: ' +  iDNumberPrint.value
+    document.getElementById('dobModal').innerText = 'Your age is: ' +  dobBirthPrint.value
+    document.getElementById('phoneModal').innerText = 'Your phone number is: ' +  phonePrint.value
+    document.getElementById('addressModal').innerText = 'Your addres is: ' +  addressPrint.value
+    document.getElementById('cityModal').innerText = 'Your City is: ' +  cityPrint.value
+    document.getElementById('zipModal').innerText = 'Your Zip Code is: ' +  zipPrint.value
+    document.getElementById('mailModal').innerText = 'Your e-mail is: ' +  emailPrint.value
+    document.getElementById('passwordModal').innerText = 'Your password is: ' +  passwordPrint.value
+
     }
 function confirm() {
     if (inputA == true && inputB == true && inputC == true && inputD == true && inputE ==  true && inputF == true && inputG == true
